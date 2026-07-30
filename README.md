@@ -138,8 +138,8 @@ memorability-ranker
 ## Installation
 
 ```bash
-git clone https://github.com/<username>/memorability-ranker.git
-cd memorability-ranker
+git clone https://github.com/VasishtGit/Semantic-Memorability-Ranker.git
+cd Semantic-Memorability-Ranker
 
 uv sync
 ```
