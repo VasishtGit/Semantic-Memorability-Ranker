@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+
+logs/
+checkpoints/
+
+.venv/
+.vscode/
+
+*.pt
+*.pth
