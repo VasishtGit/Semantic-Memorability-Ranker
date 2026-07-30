@@ -1,3 +1,5 @@
+"""ModernBERT backbone wrapper used as the feature extractor."""
+
 from transformers import AutoModel
 import torch.nn as nn
 
@@ -15,16 +17,8 @@ class Backbone(nn.Module):
             model_name,
         )
 
-        ##################################################
-        # Freeze entire backbone
-        ##################################################
-
         for param in self.encoder.parameters():
             param.requires_grad = False
-
-        ##################################################
-        # Unfreeze last N encoder layers
-        ##################################################
 
         if unfreeze_last_n_layers > 0:
 

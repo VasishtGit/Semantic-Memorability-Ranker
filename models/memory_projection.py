@@ -1,3 +1,5 @@
+"""Projection layer that maps pooled features into the semantic memory space."""
+
 import torch.nn as nn
 
 

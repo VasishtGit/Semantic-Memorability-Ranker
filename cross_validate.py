@@ -1,3 +1,5 @@
+"""Run k-fold cross-validation for the memorability ranking model."""
+
 import json
 import random
 
@@ -13,9 +15,7 @@ from models.memorability_ranker import NeuroDapt
 from trainer.collate import NeuroDaptCollator
 from trainer.trainer import Trainer
 
-##################################################
-# Reproducibility
-##################################################
+# Ensure deterministic behavior for repeated validation runs.
 
 SEED = 42
 
@@ -25,32 +25,24 @@ np.random.seed(SEED)
 torch.manual_seed(SEED)
 torch.cuda.manual_seed_all(SEED)
 
-##################################################
-# Hyperparameters
-##################################################
+# Configure batch size, epochs, and the number of folds for evaluation.
 
 BATCH_SIZE = 16
 EPOCHS = 50
 LEARNING_RATE = 2e-5
 NUM_FOLDS = 5
 
-##################################################
-# Dataset
-##################################################
+# Load the full processed dataset once for cross-validation splits.
 
 dataset = NeuroDaptDataset(
     "data/processed/train.jsonl",
 )
 
-##################################################
-# Collator
-##################################################
+# Create a shared collator for all folds.
 
 collator = NeuroDaptCollator()
 
-##################################################
-# Cross Validation
-##################################################
+# Iterate through each fold, train a model, and collect validation metrics.
 
 kf = KFold(
     n_splits=NUM_FOLDS,
@@ -69,9 +61,7 @@ for fold, (train_idx, val_idx) in enumerate(
     print(f"Fold {fold}/{NUM_FOLDS}")
     print("=" * 60)
 
-    ##################################################
-    # Dataset Split
-    ##################################################
+    # Extract train and validation indices for this fold.
 
     train_dataset = Subset(
         dataset,
@@ -83,9 +73,7 @@ for fold, (train_idx, val_idx) in enumerate(
         val_idx,
     )
 
-    ##################################################
-    # DataLoaders
-    ##################################################
+    # Build fold-specific loaders with the same batching logic as training.
 
     train_loader = DataLoader(
         train_dataset,
@@ -104,18 +92,13 @@ for fold, (train_idx, val_idx) in enumerate(
         num_workers=0,
         pin_memory=torch.cuda.is_available(),
     )
-
-    ##################################################
-    # Model
-    ##################################################
+    # Create a fresh model for each fold to avoid cross-fold leakage.
 
     model = NeuroDapt(
         unfreeze_last_n_layers=2,
     )
 
-    ##################################################
-    # Trainer
-    ##################################################
+    # Configure the trainer with a fold-specific checkpoint directory.
 
     trainer = Trainer(
         model=model,
@@ -126,9 +109,7 @@ for fold, (train_idx, val_idx) in enumerate(
         patience=8,
     )
 
-    ##################################################
-    # Scheduler
-    ##################################################
+    # Attach the same cosine schedule used in single-train runs.
 
     trainer.scheduler = CosineAnnealingLR(
         trainer.optimizer,
@@ -136,9 +117,8 @@ for fold, (train_idx, val_idx) in enumerate(
         eta_min=1e-6,
     )
 
-    ##################################################
-    # Train
-    ##################################################
+
+    # Fit the model for this fold and store the resulting metrics.
 
     metrics = trainer.fit(
         epochs=EPOCHS,
@@ -146,9 +126,7 @@ for fold, (train_idx, val_idx) in enumerate(
 
     results.append(metrics)
 
-    ##################################################
-    # Fold Summary
-    ##################################################
+    # Print the key metrics for the completed fold.
 
     print("\nFold Summary")
 
@@ -157,9 +135,7 @@ for fold, (train_idx, val_idx) in enumerate(
             f"{key.upper():10s}: {value:.4f}"
         )
 
-##################################################
-# Save Results
-##################################################
+# Persist the collected fold metrics to disk for later inspection.
 
 with open(
     "cross_validation_results.json",
@@ -172,9 +148,8 @@ with open(
         indent=4,
     )
 
-##################################################
-# Overall Summary
-##################################################
+
+# Report the mean and standard deviation of the main evaluation metrics.
 
 print("\n")
 print("=" * 60)

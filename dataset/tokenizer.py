@@ -1,7 +1,10 @@
+"""Tokenizer wrapper used to encode paragraph/clause pairs for the model."""
+
 from transformers import AutoTokenizer
 
 
 class NeuroDaptTokenizer:
+    """Wraps a Hugging Face tokenizer for paragraph/clause pair inputs."""
 
     def __init__(
         self,
@@ -9,6 +12,7 @@ class NeuroDaptTokenizer:
         max_length: int = 512,
     ):
 
+        # Configure the tokenizer length and load the pretrained model.
         self.max_length = max_length
 
         self.tokenizer = AutoTokenizer.from_pretrained(
@@ -21,6 +25,7 @@ class NeuroDaptTokenizer:
         target_clause: str,
     ):
 
+        # Build a combined text representation that preserves both contexts.
         text = (
             f"Paragraph:\n{paragraph}\n\n"
             f"Target Clause:\n{target_clause}"

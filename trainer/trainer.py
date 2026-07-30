@@ -1,3 +1,5 @@
+"""Training loop and checkpointing utilities for the memorability ranker."""
+
 from pathlib import Path
 
 import torch
@@ -10,6 +12,7 @@ from trainer.metrics import regression_metrics
 
 
 class Trainer:
+    """High-level training loop with checkpointing, validation, and early stopping."""
 
     def __init__(
         self,
@@ -25,6 +28,7 @@ class Trainer:
         patience=8,
     ):
 
+        # Move the model to the selected device and create the optimizer.
         self.device = torch.device(device)
 
         self.model = model.to(self.device)
@@ -42,6 +46,7 @@ class Trainer:
 
         self.scheduler = scheduler
 
+        # Enable mixed-precision training on CUDA for faster updates.
         self.scaler = torch.amp.GradScaler(
             "cuda",
         )
@@ -53,6 +58,7 @@ class Trainer:
             exist_ok=True,
         )
 
+        # Track the best validation RMSE and the metrics that produced it.
         self.best_rmse = float("inf")
         self.best_metrics = None
 
@@ -68,6 +74,7 @@ class Trainer:
     ####################################################################
 
     def train_epoch(self):
+        """Run one full pass over the training loader and return the mean loss."""
 
         self.model.train()
 
@@ -146,6 +153,7 @@ class Trainer:
     ####################################################################
 
     def validate_epoch(self):
+        """Run validation and compute regression metrics on the held-out data."""
 
         self.model.eval()
 
@@ -216,6 +224,7 @@ class Trainer:
         self,
         filename,
     ):
+        """Persist the current model weights to disk."""
 
         torch.save(
             self.model.state_dict(),
@@ -230,6 +239,7 @@ class Trainer:
         self,
         epochs,
     ):
+        """Train the model for the requested number of epochs."""
 
         for epoch in range(
             1,

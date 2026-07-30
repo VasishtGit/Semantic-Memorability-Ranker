@@ -1,7 +1,10 @@
+"""Loss factory for selecting the regression objective."""
+
 import torch.nn as nn
 
 
 def get_loss(name="huber"):
+    """Return the requested PyTorch loss module for regression training."""
 
     name = name.lower()
 

@@ -1,3 +1,5 @@
+"""Learned semantic memory module with multi-head retrieval and gating."""
+
 import math
 
 import torch
@@ -24,19 +26,11 @@ class SemanticMemory(nn.Module):
 
         self.head_dim = memory_dim // num_heads
 
-        ##################################################
-        # Query Projection
-        ##################################################
-
         self.query = nn.Linear(
             memory_dim,
             memory_dim,
             bias=False,
         )
-
-        ##################################################
-        # Learnable Memory Bank
-        ##################################################
 
         self.keys = nn.Parameter(
             torch.empty(
@@ -54,18 +48,10 @@ class SemanticMemory(nn.Module):
             )
         )
 
-        ##################################################
-        # Output Projection
-        ##################################################
-
         self.output = nn.Linear(
             memory_dim,
             memory_dim,
         )
-
-        ##################################################
-        # Adaptive Memory Gate
-        ##################################################
 
         self.gate = nn.Sequential(
             nn.Linear(
@@ -74,10 +60,6 @@ class SemanticMemory(nn.Module):
             ),
             nn.Sigmoid(),
         )
-
-        ##################################################
-        # Initialization
-        ##################################################
 
         nn.init.xavier_uniform_(self.keys)
         nn.init.xavier_uniform_(self.values)
@@ -97,10 +79,6 @@ class SemanticMemory(nn.Module):
 
         batch_size = x.size(0)
 
-        ##################################################
-        # Query
-        ##################################################
-
         q = self.query(x)
 
         q = q.view(
@@ -108,10 +86,6 @@ class SemanticMemory(nn.Module):
             self.num_heads,
             self.head_dim,
         )
-
-        ##################################################
-        # Multi-head Memory Retrieval
-        ##################################################
 
         outputs = []
 
@@ -141,10 +115,6 @@ class SemanticMemory(nn.Module):
                 retrieved,
             )
 
-        ##################################################
-        # Merge Heads
-        ##################################################
-
         retrieved = torch.cat(
             outputs,
             dim=-1,
@@ -153,11 +123,6 @@ class SemanticMemory(nn.Module):
         retrieved = self.output(
             retrieved,
         )
-
-        ##################################################
-        # Adaptive Memory Gate
-        ##################################################
-
         gate = self.gate(
             torch.cat(
                 [

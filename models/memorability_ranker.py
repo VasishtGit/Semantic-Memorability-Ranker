@@ -1,3 +1,5 @@
+"""Main neural network module that combines encoding, pooling, memory, and regression."""
+
 import torch
 import torch.nn as nn
 
@@ -16,45 +18,30 @@ class NeuroDapt(nn.Module):
     ):
         super().__init__()
 
-        ##################################################
-        # Backbone
-        ##################################################
-
+        # Encode the input text with the pretrained ModernBERT backbone.
         self.backbone = Backbone(
             unfreeze_last_n_layers=unfreeze_last_n_layers,
         )
 
-        ##################################################
-        # Clause Attention Pooling
-        ##################################################
-
+        # Aggregate token-level representations into a single clause-aware vector.
         self.pooling = ClauseAttentionPooling(
             hidden_size=self.backbone.hidden_size,
         )
 
-        ##################################################
-        # Memory Projection
-        ##################################################
-
+        # Project the pooled embedding into the memory space.
         self.memory_projection = MemoryProjection(
             input_dim=self.backbone.hidden_size,
             memory_dim=memory_dim,
         )
 
-        ##################################################
-        # Semantic Memory
-        ##################################################
-
+        # Apply the semantic memory module to refine the representation.
         self.semantic_memory = SemanticMemory(
             memory_dim=memory_dim,
             num_heads=4,
             slots_per_head=16,
         )
 
-        ##################################################
-        # Regression Head
-        ##################################################
-
+        # Final regression head that predicts a memorability score.
         self.regression = nn.Linear(
             memory_dim,
             1,
@@ -66,44 +53,29 @@ class NeuroDapt(nn.Module):
         attention_mask,
     ):
 
-        ##################################################
-        # ModernBERT
-        ##################################################
-
+        # Produce contextual token embeddings from the input sequence.
         hidden = self.backbone(
             input_ids,
             attention_mask,
         )
 
-        ##################################################
-        # Clause Attention Pooling
-        ##################################################
-
+        # Combine the token embeddings into a single clause-focused vector.
         pooled = self.pooling(
             hidden,
             attention_mask,
         )
 
-        ##################################################
-        # Memory Projection
-        ##################################################
-
+        # Move the pooled representation into the memory embedding space.
         memory = self.memory_projection(
             pooled,
         )
 
-        ##################################################
-        # Semantic Memory
-        ##################################################
-
+        # Refine the representation using the learned semantic memory bank.
         memory = self.semantic_memory(
             memory,
         )
 
-        ##################################################
-        # Regression
-        ##################################################
-
+        # Predict a scalar memorability score and squash it to the $(0, 1)$ range.
         score = self.regression(
             memory,
         )

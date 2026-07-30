@@ -1,3 +1,5 @@
+"""Training entry point for the memorability ranking model."""
+
 import random
 
 import numpy as np
@@ -11,10 +13,7 @@ from models.memorability_ranker import NeuroDapt
 from trainer.collate import NeuroDaptCollator
 from trainer.trainer import Trainer
 
-
-##################################################
-# Reproducibility
-##################################################
+# Keep runs stable by fixing the random seed across Python, NumPy, and PyTorch.
 
 SEED = 42
 
@@ -24,9 +23,7 @@ np.random.seed(SEED)
 torch.manual_seed(SEED)
 torch.cuda.manual_seed_all(SEED)
 
-##################################################
-# Hyperparameters
-##################################################
+# Basic training configuration for the memorability regressor.
 
 BATCH_SIZE = 16
 
@@ -34,9 +31,7 @@ EPOCHS = 50
 
 LEARNING_RATE = 2e-5
 
-##################################################
-# Dataset
-##################################################
+# Load the processed training data from disk.
 
 dataset = NeuroDaptDataset(
     "data/processed/train.jsonl",
@@ -54,15 +49,13 @@ train_dataset, val_dataset = random_split(
     generator=torch.Generator().manual_seed(SEED),
 )
 
-##################################################
-# Collator
-##################################################
+
+# Use a collator to batch text samples into model-ready tensors.
 
 collator = NeuroDaptCollator()
 
-##################################################
-# DataLoaders
-##################################################
+
+# Split the dataset into train and validation loaders for iterative training.
 
 train_loader = DataLoader(
     train_dataset,
@@ -78,17 +71,15 @@ val_loader = DataLoader(
     collate_fn=collator,
 )
 
-##################################################
-# Model
-##################################################
+
+
+# Instantiate the core ranking model with a lightly fine-tuned backbone.
 
 model = NeuroDapt(
     unfreeze_last_n_layers=2,
 )
 
-##################################################
-# Trainer
-##################################################
+# Wrap the model and loaders in the custom training runtime.
 
 trainer = Trainer(
     model=model,
@@ -97,9 +88,7 @@ trainer = Trainer(
     lr=LEARNING_RATE,
 )
 
-##################################################
-# Scheduler
-##################################################
+# Use a cosine schedule to gradually decay the learning rate during training.
 
 trainer.scheduler = CosineAnnealingLR(
     trainer.optimizer,
@@ -107,9 +96,7 @@ trainer.scheduler = CosineAnnealingLR(
     eta_min=1e-6,
 )
 
-##################################################
-# Train
-##################################################
+# Start the optimization loop for the configured number of epochs.
 
 trainer.fit(
     epochs=EPOCHS,

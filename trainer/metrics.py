@@ -1,3 +1,5 @@
+"""Regression metrics used to evaluate model predictions."""
+
 import numpy as np
 
 from scipy.stats import pearsonr
@@ -8,6 +10,7 @@ def regression_metrics(
     prediction,
     target,
 ):
+    """Compute MAE, RMSE, Pearson, and Spearman metrics for predictions."""
 
     prediction = np.asarray(prediction)
     target = np.asarray(target)

@@ -1,3 +1,5 @@
+"""Attention-based pooling layer for selecting clause-relevant information."""
+
 import torch
 import torch.nn as nn
 

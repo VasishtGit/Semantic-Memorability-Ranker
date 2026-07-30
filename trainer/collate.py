@@ -1,9 +1,12 @@
+"""Collator that converts batches of samples into model-ready tensors."""
+
 import torch
 
 from dataset.tokenizer import NeuroDaptTokenizer
 
 
 class NeuroDaptCollator:
+    """Batch samples into tensors for the memorability regression model."""
 
     def __init__(
         self,
