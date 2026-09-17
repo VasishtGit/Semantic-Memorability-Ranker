@@ -1,10 +1,11 @@
-"""Attention-based pooling layer for selecting clause-relevant information."""
+"""Attention-based pooling layer for selecting target-clause information."""
 
 import torch
 import torch.nn as nn
 
 
 class ClauseAttentionPooling(nn.Module):
+    """Pools representations using only target-clause tokens."""
 
     def __init__(
         self,
@@ -20,14 +21,16 @@ class ClauseAttentionPooling(nn.Module):
     def forward(
         self,
         hidden_states,
-        attention_mask,
+        clause_mask,
     ):
         """
         hidden_states:
-            (B,T,H)
+            (B, T, H)
 
-        attention_mask:
-            (B,T)
+        clause_mask:
+            (B, T)
+            1 = target clause
+            0 = context/special/padding
         """
 
         scores = self.score(
@@ -35,9 +38,9 @@ class ClauseAttentionPooling(nn.Module):
         ).squeeze(-1)
 
         scores = scores.masked_fill(
-            attention_mask == 0,
+            clause_mask == 0,
             torch.finfo(scores.dtype).min,
-        )   
+        )
 
         weights = torch.softmax(
             scores,

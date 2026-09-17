@@ -1,0 +1,2898 @@
+{
+  "checkpoint": "checkpoints\\best.pt",
+  "stories": 9,
+  "clauses": 413,
+  "predictions": [
+    {
+      "story": "boyscout",
+      "clause_id": 1,
+      "text": "Yeah, I was in the boy scouts at the time.",
+      "human_memorability": 0.77,
+      "predicted_memorability": 0.8481168746948242
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 2,
+      "text": "And we was doing the 50-yard dash,",
+      "human_memorability": 0.6,
+      "predicted_memorability": 0.5605711936950684
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 3,
+      "text": "racing,",
+      "human_memorability": 0.16,
+      "predicted_memorability": 0.5353111624717712
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 4,
+      "text": "but we was at the pier, marked off,",
+      "human_memorability": 0.36,
+      "predicted_memorability": 0.11805475503206253
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 5,
+      "text": "and so we was doing the 50-yard dash.",
+      "human_memorability": 0.51,
+      "predicted_memorability": 0.5618330240249634
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 6,
+      "text": "There was about 8 or 9 of us, you know, going down, coming back.",
+      "human_memorability": 0.43,
+      "predicted_memorability": 0.48434749245643616
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 7,
+      "text": "And, going down the third time, I caught cramps",
+      "human_memorability": 0.71,
+      "predicted_memorability": 0.5313263535499573
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 8,
+      "text": "and I started yelling \"Help!\",",
+      "human_memorability": 0.41,
+      "predicted_memorability": 0.14704357087612152
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 9,
+      "text": "but the fellows didn't believe me, you know.",
+      "human_memorability": 0.56,
+      "predicted_memorability": 0.3305673897266388
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 10,
+      "text": "They thought I was just trying to catch up, because I was going on or slowing down.",
+      "human_memorability": 0.43,
+      "predicted_memorability": 0.19085033237934113
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 11,
+      "text": "So all of them kept going.",
+      "human_memorability": 0.21,
+      "predicted_memorability": 0.11212620139122009
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 12,
+      "text": "They leave me.",
+      "human_memorability": 0.15,
+      "predicted_memorability": 0.0864788144826889
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 13,
+      "text": "And so I started going down.",
+      "human_memorability": 0.25,
+      "predicted_memorability": 0.2575525939464569
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 14,
+      "text": "Scoutmaster was up there.",
+      "human_memorability": 0.6,
+      "predicted_memorability": 0.3606642186641693
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 15,
+      "text": "He was watching me.",
+      "human_memorability": 0.25,
+      "predicted_memorability": 0.08230730891227722
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 16,
+      "text": "But he didn't pay me no attention either.",
+      "human_memorability": 0.53,
+      "predicted_memorability": 0.2152845710515976
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 17,
+      "text": "And for no reason at all there was another guy, who had just walked up that minute...",
+      "human_memorability": 0.5,
+      "predicted_memorability": 0.25556737184524536
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 18,
+      "text": "He just jumped over",
+      "human_memorability": 0.24,
+      "predicted_memorability": 0.10331546515226364
+    },
+    {
+      "story": "boyscout",
+      "clause_id": 19,
+      "text": "and grabbed me.",
+      "human_memorability": 0.63,
+      "predicted_memorability": 0.047504741698503494
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 1,
+      "text": "Let me share a story from when I was twenty-one years old.",
+      "human_memorability": 0.551,
+      "predicted_memorability": 0.5865250825881958
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 2,
+      "text": "I was living in a small apartment near the city center.",
+      "human_memorability": 0.5408,
+      "predicted_memorability": 0.633435845375061
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 3,
+      "text": "I had just started my first job.",
+      "human_memorability": 0.398,
+      "predicted_memorability": 0.8910207152366638
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 4,
+      "text": "And uh I was working as a graphic designer.",
+      "human_memorability": 0.3776,
+      "predicted_memorability": 0.43360933661460876
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 5,
+      "text": "My father, who was recovering from a surgery, hadn't been out in \u2013 in uh \u2013 well I'd say about eight months.",
+      "human_memorability": 0.898,
+      "predicted_memorability": 0.9873141646385193
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 6,
+      "text": "He had to use a wheelchair to get around.",
+      "human_memorability": 0.551,
+      "predicted_memorability": 0.5432279109954834
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 7,
+      "text": "The only person there with him during the day was a kind neighbor, a lady in her sixties.",
+      "human_memorability": 0.7245,
+      "predicted_memorability": 0.8049950003623962
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 8,
+      "text": "My younger sister was away at college \u2013",
+      "human_memorability": 0.4184,
+      "predicted_memorability": 0.9083422422409058
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 9,
+      "text": "so it was just my dad and the neighbor lady at home during the day.",
+      "human_memorability": 0.3469,
+      "predicted_memorability": 0.9380190968513489
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 10,
+      "text": "One day, I got this strong feeling while I was at work.",
+      "human_memorability": 0.8367,
+      "predicted_memorability": 0.8278746008872986
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 11,
+      "text": "It told me: \"If you go to the nearby park during your lunch break and pray for your father's recovery, he'll start to improve.\"",
+      "human_memorability": 0.7551,
+      "predicted_memorability": 0.8931687474250793
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 12,
+      "text": "I looked around my office.",
+      "human_memorability": 0.1735,
+      "predicted_memorability": 0.5849762558937073
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 13,
+      "text": "I didn't see anyone nearby.",
+      "human_memorability": 0.3061,
+      "predicted_memorability": 0.1424676477909088
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 14,
+      "text": "So, I went to the park during my break",
+      "human_memorability": 0.8673,
+      "predicted_memorability": 0.40259137749671936
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 15,
+      "text": "and found a quiet spot there.",
+      "human_memorability": 0.2041,
+      "predicted_memorability": 0.08734291046857834
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 16,
+      "text": "That feeling came back again.",
+      "human_memorability": 0.2959,
+      "predicted_memorability": 0.22435733675956726
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 17,
+      "text": "I looked around once more.",
+      "human_memorability": 0.102,
+      "predicted_memorability": 0.08728080987930298
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 18,
+      "text": "I still didn't see anyone nearby",
+      "human_memorability": 0.2041,
+      "predicted_memorability": 0.12854622304439545
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 19,
+      "text": "but I decided to take a chance.",
+      "human_memorability": 0.1531,
+      "predicted_memorability": 0.3068576455116272
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 20,
+      "text": "I wasn't too far from my office, maybe a ten-minute walk.",
+      "human_memorability": 0.2449,
+      "predicted_memorability": 0.6673183441162109
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 21,
+      "text": "I found a bench to sit on and closed my eyes \u2013 uh \u2013 uh \u2013",
+      "human_memorability": 0.1735,
+      "predicted_memorability": 0.153363436460495
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 22,
+      "text": "that feeling came back once more.",
+      "human_memorability": 0.2245,
+      "predicted_memorability": 0.20534978806972504
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 23,
+      "text": "I just took a deep breath.",
+      "human_memorability": 0.0204,
+      "predicted_memorability": 0.36118531227111816
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 24,
+      "text": "I was sitting under a big oak tree now.",
+      "human_memorability": 0.5102,
+      "predicted_memorability": 0.5539801120758057
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 25,
+      "text": "I looked up at the branches above me.",
+      "human_memorability": 0.0816,
+      "predicted_memorability": 0.32340431213378906
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 26,
+      "text": "Nobody was around.",
+      "human_memorability": 0.1327,
+      "predicted_memorability": 0.09138618409633636
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 27,
+      "text": "And uh I said to myself, well now,",
+      "human_memorability": 0.0102,
+      "predicted_memorability": 0.38063371181488037
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 28,
+      "text": "I had been taught that prayers can make a difference.",
+      "human_memorability": 0.1633,
+      "predicted_memorability": 0.6708611249923706
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 29,
+      "text": "And that it doesn't hurt to try.",
+      "human_memorability": 0.1122,
+      "predicted_memorability": 0.1008290946483612
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 30,
+      "text": "I knew I wasn't perfect, but I wanted to help my dad.",
+      "human_memorability": 0.1429,
+      "predicted_memorability": 0.9655618071556091
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 31,
+      "text": "I'd admit that to anyone.",
+      "human_memorability": 0.0102,
+      "predicted_memorability": 0.26628199219703674
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 32,
+      "text": "But I was willing to give it a try.",
+      "human_memorability": 0.1531,
+      "predicted_memorability": 0.18296033143997192
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 33,
+      "text": "I looked around one more time",
+      "human_memorability": 0.0204,
+      "predicted_memorability": 0.11878510564565659
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 34,
+      "text": "and then I closed my eyes",
+      "human_memorability": 0.1531,
+      "predicted_memorability": 0.113225556910038
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 35,
+      "text": "and said a quiet prayer.",
+      "human_memorability": 0.7143,
+      "predicted_memorability": 0.3643815517425537
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 36,
+      "text": "I whispered, \"God, I don't know if you're listening.",
+      "human_memorability": 0.2551,
+      "predicted_memorability": 0.28707653284072876
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 37,
+      "text": "But I ask you to please help my father recover.",
+      "human_memorability": 0.5408,
+      "predicted_memorability": 0.9802283644676208
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 38,
+      "text": "So he can regain his independence and enjoy life again.\"",
+      "human_memorability": 0.2143,
+      "predicted_memorability": 0.361934632062912
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 39,
+      "text": "I opened my eyes",
+      "human_memorability": 0.0204,
+      "predicted_memorability": 0.15265816450119019
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 40,
+      "text": "and went back to work.",
+      "human_memorability": 0.3878,
+      "predicted_memorability": 0.4804779589176178
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 41,
+      "text": "Suddenly, I received a text message from my father.",
+      "human_memorability": 0.7959,
+      "predicted_memorability": 0.9856577515602112
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 42,
+      "text": "It said, \"I just took a few steps with my walker.\"",
+      "human_memorability": 0.8878,
+      "predicted_memorability": 0.36424723267555237
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 43,
+      "text": "I \u2013 I couldn't believe it.",
+      "human_memorability": 0.1122,
+      "predicted_memorability": 0.2505675256252289
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 44,
+      "text": "It felt like a sign that my prayer had been heard.",
+      "human_memorability": 0.1837,
+      "predicted_memorability": 0.3875967562198639
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 45,
+      "text": "I rushed home after work",
+      "human_memorability": 0.449,
+      "predicted_memorability": 0.33131909370422363
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 46,
+      "text": "and saw my father standing in the living room with the help of his walker.",
+      "human_memorability": 0.4898,
+      "predicted_memorability": 0.9751601815223694
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 47,
+      "text": "He hadn't been able to do that in months without assistance.",
+      "human_memorability": 0.2245,
+      "predicted_memorability": 0.2915286421775818
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 48,
+      "text": "And there he was, taking small steps.",
+      "human_memorability": 0.1122,
+      "predicted_memorability": 0.32610443234443665
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 49,
+      "text": "That was the turning point in his recovery.",
+      "human_memorability": 0.1122,
+      "predicted_memorability": 0.6004156470298767
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 50,
+      "text": "He continued to improve",
+      "human_memorability": 0.4694,
+      "predicted_memorability": 0.11780747026205063
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 51,
+      "text": "and regained most of his mobility within a year.",
+      "human_memorability": 0.2857,
+      "predicted_memorability": 0.08867573738098145
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 52,
+      "text": "It's been, what, six or seven years since then?",
+      "human_memorability": 0.5102,
+      "predicted_memorability": 0.49613940715789795
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 53,
+      "text": "My father is now able to walk without any assistance.",
+      "human_memorability": 0.6327,
+      "predicted_memorability": 0.9721934199333191
+    },
+    {
+      "story": "hester_v1-park",
+      "clause_id": 54,
+      "text": "He's living life to the fullest, even in his seventies.",
+      "human_memorability": 0.5816,
+      "predicted_memorability": 0.32582059502601624
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 1,
+      "text": "Let me share a story from when I was twenty-two years old, just fresh out of college.",
+      "human_memorability": 0.71,
+      "predicted_memorability": 0.4846210479736328
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 2,
+      "text": "I was staying in a small town about five miles from here.",
+      "human_memorability": 0.08,
+      "predicted_memorability": 0.39223575592041016
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 3,
+      "text": "I had just started my first job at a local bookstore.",
+      "human_memorability": 0.83,
+      "predicted_memorability": 0.6177465319633484
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 4,
+      "text": "It was a quiet afternoon, and I was alone in the store.",
+      "human_memorability": 0.05,
+      "predicted_memorability": 0.7366880774497986
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 5,
+      "text": "My grandpa, who had been bedridden for almost a year, was at home with my sister.",
+      "human_memorability": 0.85,
+      "predicted_memorability": 0.9559306502342224
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 6,
+      "text": "She had to care for him daily, as he couldn't move around on his own.",
+      "human_memorability": 0.48,
+      "predicted_memorability": 0.24474386870861053
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 7,
+      "text": "There were only two of us siblings, my sister and me.",
+      "human_memorability": 0.41,
+      "predicted_memorability": 0.9291664958000183
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 8,
+      "text": "My parents had gone out of town for the weekend.",
+      "human_memorability": 0.39,
+      "predicted_memorability": 0.713129460811615
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 9,
+      "text": "As I was shelving books, I suddenly heard a voice inside my head.",
+      "human_memorability": 0.86,
+      "predicted_memorability": 0.7604082226753235
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 10,
+      "text": "It said, \"If you go to the old church down the street and light a candle for your grandpa, he will get better.\"",
+      "human_memorability": 0.92,
+      "predicted_memorability": 0.7502893209457397
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 11,
+      "text": "I looked around the bookstore, but no one was there.",
+      "human_memorability": 0.25,
+      "predicted_memorability": 0.3121908903121948
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 12,
+      "text": "I continued with my work, trying to ignore the voice.",
+      "human_memorability": 0.19,
+      "predicted_memorability": 0.2741774618625641
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 13,
+      "text": "It spoke to me again, repeating the same message.",
+      "human_memorability": 0.36,
+      "predicted_memorability": 0.20920978486537933
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 14,
+      "text": "I looked around once more, but still found no one.",
+      "human_memorability": 0.06,
+      "predicted_memorability": 0.2350398451089859
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 15,
+      "text": "I decided to take a break and walk to the church.",
+      "human_memorability": 0.72,
+      "predicted_memorability": 0.36303094029426575
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 16,
+      "text": "I was only a short distance away, maybe a quarter-mile.",
+      "human_memorability": 0.14,
+      "predicted_memorability": 0.20172685384750366
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 17,
+      "text": "As I approached the church, I hesitated for a moment.",
+      "human_memorability": 0.05,
+      "predicted_memorability": 0.4634407162666321
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 18,
+      "text": "I was not a particularly religious person.",
+      "human_memorability": 0.54,
+      "predicted_memorability": 0.49418240785598755
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 19,
+      "text": "I remembered my grandma always saying that prayers from a sincere heart could bring miracles.",
+      "human_memorability": 0.37,
+      "predicted_memorability": 0.8848002552986145
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 20,
+      "text": "On the other hand, she also said that prayers without faith were useless.",
+      "human_memorability": 0.23,
+      "predicted_memorability": 0.3490942716598511
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 21,
+      "text": "I admitted to myself that I was far from being a saint.",
+      "human_memorability": 0.11,
+      "predicted_memorability": 0.47506842017173767
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 22,
+      "text": "I had my share of mistakes and misdeeds.",
+      "human_memorability": 0.06,
+      "predicted_memorability": 0.31112754344940186
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 23,
+      "text": "I thought about my grandpa and how much he meant to our family.",
+      "human_memorability": 0.02,
+      "predicted_memorability": 0.8615833520889282
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 24,
+      "text": "Finally, I went inside the church and found a candle.",
+      "human_memorability": 0.63,
+      "predicted_memorability": 0.6272627711296082
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 25,
+      "text": "I knelt down in front of the altar.",
+      "human_memorability": 0.15,
+      "predicted_memorability": 0.24007011950016022
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 26,
+      "text": "I said, \"God, I don't know how to pray properly.",
+      "human_memorability": 0.27,
+      "predicted_memorability": 0.26282617449760437
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 27,
+      "text": "But I am asking you with all my heart to heal my grandpa.",
+      "human_memorability": 0.5,
+      "predicted_memorability": 0.6594592332839966
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 28,
+      "text": "Please help him regain his strength and guide us in taking care of him.\"",
+      "human_memorability": 0.24,
+      "predicted_memorability": 0.09961260110139847
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 29,
+      "text": "After saying my prayer, I returned to the bookstore.",
+      "human_memorability": 0.61,
+      "predicted_memorability": 0.7104901075363159
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 30,
+      "text": "I resumed my work, shelving books.",
+      "human_memorability": 0.21,
+      "predicted_memorability": 0.6411243677139282
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 31,
+      "text": "Suddenly, I felt a strong urge to go home.",
+      "human_memorability": 0.7,
+      "predicted_memorability": 0.6526395082473755
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 32,
+      "text": "It was as if something was pulling me towards the house.",
+      "human_memorability": 0.45,
+      "predicted_memorability": 0.2952895164489746
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 33,
+      "text": "I didn't hear any voice this time.",
+      "human_memorability": 0.12,
+      "predicted_memorability": 0.45100876688957214
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 34,
+      "text": "It was just an overwhelming feeling that I needed to go.",
+      "human_memorability": 0.38,
+      "predicted_memorability": 0.2920532822608948
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 35,
+      "text": "I locked up the store and rushed home.",
+      "human_memorability": 0.49,
+      "predicted_memorability": 0.2019014060497284
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 36,
+      "text": "To my surprise, I found my grandpa sitting in the living room, talking to my sister.",
+      "human_memorability": 0.9,
+      "predicted_memorability": 0.9020965695381165
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 37,
+      "text": "He hadn't been able to leave his bed for months without assistance.",
+      "human_memorability": 0.56,
+      "predicted_memorability": 0.7251083850860596
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 38,
+      "text": "My sister told me that he had suddenly felt a surge of energy and was able to stand up and walk.",
+      "human_memorability": 0.52,
+      "predicted_memorability": 0.9569881558418274
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 39,
+      "text": "That day marked the beginning of his recovery.",
+      "human_memorability": 0.52,
+      "predicted_memorability": 0.40356695652008057
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 40,
+      "text": "He gradually regained his strength and independence.",
+      "human_memorability": 0.31,
+      "predicted_memorability": 0.25188857316970825
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 41,
+      "text": "It was a turning point in our lives.",
+      "human_memorability": 0.07,
+      "predicted_memorability": 0.2852492332458496
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 42,
+      "text": "We became more grateful for the time we had together.",
+      "human_memorability": 0.09,
+      "predicted_memorability": 0.5127898454666138
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 43,
+      "text": "I often thought back to that day in the church.",
+      "human_memorability": 0.06,
+      "predicted_memorability": 0.34151118993759155
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 44,
+      "text": "I wondered if my prayer had anything to do with my grandpa's recovery.",
+      "human_memorability": 0.28,
+      "predicted_memorability": 0.7641445994377136
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 45,
+      "text": "I couldn't be sure, but it definitely changed my perspective on faith and the power of prayer.",
+      "human_memorability": 0.27,
+      "predicted_memorability": 0.33876416087150574
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 46,
+      "text": "My grandpa lived for many more years after that incident.",
+      "human_memorability": 0.78,
+      "predicted_memorability": 0.8794878721237183
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 47,
+      "text": "He celebrated his ninetieth birthday surrounded by family and friends.",
+      "human_memorability": 0.33,
+      "predicted_memorability": 0.8095875978469849
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 48,
+      "text": "We cherished every moment we had with him.",
+      "human_memorability": 0.14,
+      "predicted_memorability": 0.4481261074542999
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 49,
+      "text": "That experience happened almost twenty years ago.",
+      "human_memorability": 0.3,
+      "predicted_memorability": 0.21818296611309052
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 50,
+      "text": "It remains a vivid memory in my mind.",
+      "human_memorability": 0.08,
+      "predicted_memorability": 0.4189900755882263
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 51,
+      "text": "My grandpa passed away a few years later, but his spirit lives on in our hearts.",
+      "human_memorability": 0.35,
+      "predicted_memorability": 0.9626731872558594
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 52,
+      "text": "Sometimes, when I'm feeling lost or uncertain, I think back to that day.",
+      "human_memorability": 0.11,
+      "predicted_memorability": 0.6639262437820435
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 53,
+      "text": "I remember the power of faith and the miracles it can bring.",
+      "human_memorability": 0.28,
+      "predicted_memorability": 0.21055743098258972
+    },
+    {
+      "story": "hester_v2-church",
+      "clause_id": 54,
+      "text": "And I am reminded that we are never truly alone, even when it seems like we are.",
+      "human_memorability": 0.12,
+      "predicted_memorability": 0.7749468088150024
+    },
+    {
+      "story": "panic",
+      "clause_id": 1,
+      "text": "Well, I was at work one day",
+      "human_memorability": 0.7,
+      "predicted_memorability": 0.726416289806366
+    },
+    {
+      "story": "panic",
+      "clause_id": 2,
+      "text": "and I was doing my usual job",
+      "human_memorability": 0.71,
+      "predicted_memorability": 0.7987075448036194
+    },
+    {
+      "story": "panic",
+      "clause_id": 3,
+      "text": "- working on the warehouse floor,",
+      "human_memorability": 0.52,
+      "predicted_memorability": 0.2945330739021301
+    },
+    {
+      "story": "panic",
+      "clause_id": 4,
+      "text": "stocking boxes",
+      "human_memorability": 0.51,
+      "predicted_memorability": 0.09687744081020355
+    },
+    {
+      "story": "panic",
+      "clause_id": 5,
+      "text": "and organizing merchandise.",
+      "human_memorability": 0.25,
+      "predicted_memorability": 0.05603157356381416
+    },
+    {
+      "story": "panic",
+      "clause_id": 6,
+      "text": "I had been working for a few hours",
+      "human_memorability": 0.15,
+      "predicted_memorability": 0.7104145884513855
+    },
+    {
+      "story": "panic",
+      "clause_id": 7,
+      "text": "and it was getting late.",
+      "human_memorability": 0.1,
+      "predicted_memorability": 0.7346041202545166
+    },
+    {
+      "story": "panic",
+      "clause_id": 8,
+      "text": "I had been feeling a bit strange,",
+      "human_memorability": 0.47,
+      "predicted_memorability": 0.5631217360496521
+    },
+    {
+      "story": "panic",
+      "clause_id": 9,
+      "text": "a bit lightheaded,",
+      "human_memorability": 0.36,
+      "predicted_memorability": 0.3455006778240204
+    },
+    {
+      "story": "panic",
+      "clause_id": 10,
+      "text": "but chalked it up to hunger",
+      "human_memorability": 0.41,
+      "predicted_memorability": 0.09576121717691422
+    },
+    {
+      "story": "panic",
+      "clause_id": 11,
+      "text": "and not having eaten yet that day.",
+      "human_memorability": 0.38,
+      "predicted_memorability": 0.5850067138671875
+    },
+    {
+      "story": "panic",
+      "clause_id": 12,
+      "text": "But then, as I was walking around the warehouse",
+      "human_memorability": 0.19,
+      "predicted_memorability": 0.6202605366706848
+    },
+    {
+      "story": "panic",
+      "clause_id": 13,
+      "text": "returning items to their proper places,",
+      "human_memorability": 0.1,
+      "predicted_memorability": 0.2359803020954132
+    },
+    {
+      "story": "panic",
+      "clause_id": 14,
+      "text": "I started to feel a strange tightness",
+      "human_memorability": 0.66,
+      "predicted_memorability": 0.30798637866973877
+    },
+    {
+      "story": "panic",
+      "clause_id": 15,
+      "text": "and pressure in my chest.",
+      "human_memorability": 0.57,
+      "predicted_memorability": 0.12977488338947296
+    },
+    {
+      "story": "panic",
+      "clause_id": 16,
+      "text": "I stopped what I was doing",
+      "human_memorability": 0.23,
+      "predicted_memorability": 0.32911086082458496
+    },
+    {
+      "story": "panic",
+      "clause_id": 17,
+      "text": "and leaned against a nearby wall for a bit,",
+      "human_memorability": 0.33,
+      "predicted_memorability": 0.13742171227931976
+    },
+    {
+      "story": "panic",
+      "clause_id": 18,
+      "text": "but the pressure only got stronger.",
+      "human_memorability": 0.19,
+      "predicted_memorability": 0.25451934337615967
+    },
+    {
+      "story": "panic",
+      "clause_id": 19,
+      "text": "And I could feel my heart pounding in my chest.",
+      "human_memorability": 0.22,
+      "predicted_memorability": 0.6072366833686829
+    },
+    {
+      "story": "panic",
+      "clause_id": 20,
+      "text": "Next thing I know, I started seeing spots",
+      "human_memorability": 0.39,
+      "predicted_memorability": 0.5568374991416931
+    },
+    {
+      "story": "panic",
+      "clause_id": 21,
+      "text": "and I could feel sweat dripping down my forehead",
+      "human_memorability": 0.46,
+      "predicted_memorability": 0.39188021421432495
+    },
+    {
+      "story": "panic",
+      "clause_id": 22,
+      "text": "and my arms.",
+      "human_memorability": 0.17,
+      "predicted_memorability": 0.14735357463359833
+    },
+    {
+      "story": "panic",
+      "clause_id": 23,
+      "text": "I tried to take some deep breaths,",
+      "human_memorability": 0.21,
+      "predicted_memorability": 0.3234328031539917
+    },
+    {
+      "story": "panic",
+      "clause_id": 24,
+      "text": "but I just couldn't catch my breath.",
+      "human_memorability": 0.21,
+      "predicted_memorability": 0.6744785904884338
+    },
+    {
+      "story": "panic",
+      "clause_id": 25,
+      "text": "I was really scared",
+      "human_memorability": 0.18,
+      "predicted_memorability": 0.3869861662387848
+    },
+    {
+      "story": "panic",
+      "clause_id": 26,
+      "text": "and didn't know what to do.",
+      "human_memorability": 0.06,
+      "predicted_memorability": 0.16332173347473145
+    },
+    {
+      "story": "panic",
+      "clause_id": 27,
+      "text": "Suddenly I heard a voice coming from across the warehouse.",
+      "human_memorability": 0.35,
+      "predicted_memorability": 0.4803142547607422
+    },
+    {
+      "story": "panic",
+      "clause_id": 28,
+      "text": "It was the manager,",
+      "human_memorability": 0.71,
+      "predicted_memorability": 0.5105640888214111
+    },
+    {
+      "story": "panic",
+      "clause_id": 29,
+      "text": "who had seen me",
+      "human_memorability": 0.13,
+      "predicted_memorability": 0.16382434964179993
+    },
+    {
+      "story": "panic",
+      "clause_id": 30,
+      "text": "and called out to me",
+      "human_memorability": 0.3,
+      "predicted_memorability": 0.08125510811805725
+    },
+    {
+      "story": "panic",
+      "clause_id": 31,
+      "text": "- it seems someone had noticed me",
+      "human_memorability": 0.32,
+      "predicted_memorability": 0.1420719176530838
+    },
+    {
+      "story": "panic",
+      "clause_id": 32,
+      "text": "and was checking to see if I was alright.",
+      "human_memorability": 0.3,
+      "predicted_memorability": 0.32560959458351135
+    },
+    {
+      "story": "panic",
+      "clause_id": 33,
+      "text": "I tried to yell back that something was wrong,",
+      "human_memorability": 0.11,
+      "predicted_memorability": 0.19128483533859253
+    },
+    {
+      "story": "panic",
+      "clause_id": 34,
+      "text": "but I couldn't find my voice.",
+      "human_memorability": 0.42,
+      "predicted_memorability": 0.4588872790336609
+    },
+    {
+      "story": "panic",
+      "clause_id": 35,
+      "text": "The manager started walking towards me",
+      "human_memorability": 0.34,
+      "predicted_memorability": 0.5194790959358215
+    },
+    {
+      "story": "panic",
+      "clause_id": 36,
+      "text": "and I could feel my world going dark.",
+      "human_memorability": 0.39,
+      "predicted_memorability": 0.49784669280052185
+    },
+    {
+      "story": "panic",
+      "clause_id": 37,
+      "text": "I started to drop to the ground,",
+      "human_memorability": 0.43,
+      "predicted_memorability": 0.24821063876152039
+    },
+    {
+      "story": "panic",
+      "clause_id": 38,
+      "text": "but luckily the manager got to me in time",
+      "human_memorability": 0.75,
+      "predicted_memorability": 0.6537488102912903
+    },
+    {
+      "story": "panic",
+      "clause_id": 39,
+      "text": "and caught me just before my legs gave out.",
+      "human_memorability": 0.29,
+      "predicted_memorability": 0.879227340221405
+    },
+    {
+      "story": "panic",
+      "clause_id": 40,
+      "text": "He took me to the staff room",
+      "human_memorability": 0.65,
+      "predicted_memorability": 0.387261301279068
+    },
+    {
+      "story": "panic",
+      "clause_id": 41,
+      "text": "and sat me down in a chair.",
+      "human_memorability": 0.28,
+      "predicted_memorability": 0.24752271175384521
+    },
+    {
+      "story": "panic",
+      "clause_id": 42,
+      "text": "He asked me questions about what was wrong",
+      "human_memorability": 0.28,
+      "predicted_memorability": 0.3475710153579712
+    },
+    {
+      "story": "panic",
+      "clause_id": 43,
+      "text": "and what happened.",
+      "human_memorability": 0.05,
+      "predicted_memorability": 0.039636943489313126
+    },
+    {
+      "story": "panic",
+      "clause_id": 44,
+      "text": "He got me a glass of cold water",
+      "human_memorability": 0.6,
+      "predicted_memorability": 0.7746280431747437
+    },
+    {
+      "story": "panic",
+      "clause_id": 45,
+      "text": "and told me to rest for a bit",
+      "human_memorability": 0.16,
+      "predicted_memorability": 0.1438840627670288
+    },
+    {
+      "story": "panic",
+      "clause_id": 46,
+      "text": "After a few minutes,",
+      "human_memorability": 0.1,
+      "predicted_memorability": 0.30013373494148254
+    },
+    {
+      "story": "panic",
+      "clause_id": 47,
+      "text": "the pressure in my chest slowly eased up",
+      "human_memorability": 0.23,
+      "predicted_memorability": 0.18636249005794525
+    },
+    {
+      "story": "panic",
+      "clause_id": 48,
+      "text": "and I started to feel better.",
+      "human_memorability": 0.26,
+      "predicted_memorability": 0.6130660176277161
+    },
+    {
+      "story": "panic",
+      "clause_id": 49,
+      "text": "It turned out I had been having a panic attack,",
+      "human_memorability": 0.82,
+      "predicted_memorability": 0.8056365251541138
+    },
+    {
+      "story": "panic",
+      "clause_id": 50,
+      "text": "but I escaped from the situation",
+      "human_memorability": 0.08,
+      "predicted_memorability": 0.4705016613006592
+    },
+    {
+      "story": "panic",
+      "clause_id": 51,
+      "text": "with the help of the quick action of the manager.",
+      "human_memorability": 0.16,
+      "predicted_memorability": 0.38276028633117676
+    },
+    {
+      "story": "panic",
+      "clause_id": 52,
+      "text": "It was never a fun experience,",
+      "human_memorability": 0.11,
+      "predicted_memorability": 0.23083925247192383
+    },
+    {
+      "story": "panic",
+      "clause_id": 53,
+      "text": "but it really could have been much worse,",
+      "human_memorability": 0.18,
+      "predicted_memorability": 0.48229077458381653
+    },
+    {
+      "story": "panic",
+      "clause_id": 54,
+      "text": "and it taught me to check in with myself",
+      "human_memorability": 0.65,
+      "predicted_memorability": 0.1908537745475769
+    },
+    {
+      "story": "panic",
+      "clause_id": 55,
+      "text": "and make sure to properly rest",
+      "human_memorability": 0.46,
+      "predicted_memorability": 0.07957334816455841
+    },
+    {
+      "story": "panic",
+      "clause_id": 56,
+      "text": "and eat to avoid further episodes.",
+      "human_memorability": 0.51,
+      "predicted_memorability": 0.05473584309220314
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 1,
+      "text": "My best friend pushed me into the pool.",
+      "human_memorability": 0.8571,
+      "predicted_memorability": 0.9196478128433228
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 2,
+      "text": "This happened during my cousin's wedding reception,",
+      "human_memorability": 0.8929,
+      "predicted_memorability": 0.875329852104187
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 3,
+      "text": "where everyone was dressed to impress.",
+      "human_memorability": 0.3214,
+      "predicted_memorability": 0.19981235265731812
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 4,
+      "text": "And the reason it happened,",
+      "human_memorability": 0.0536,
+      "predicted_memorability": 0.08882806450128555
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 5,
+      "text": "she spotted a bee hovering near my face,",
+      "human_memorability": 0.8929,
+      "predicted_memorability": 0.449452668428421
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 6,
+      "text": "- this was at a fancy hotel garden -",
+      "human_memorability": 0.25,
+      "predicted_memorability": 0.30810919404029846
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 7,
+      "text": "and she tried to save me from being stung.",
+      "human_memorability": 0.5536,
+      "predicted_memorability": 0.0995848998427391
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 8,
+      "text": "And my aunt had just handed me a glass of champagne,",
+      "human_memorability": 0.5714,
+      "predicted_memorability": 0.8723024129867554
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 9,
+      "text": "and I warned her to be careful.",
+      "human_memorability": 0.125,
+      "predicted_memorability": 0.25808945298194885
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 10,
+      "text": "'Course friends, y'know, they don't always think things through.",
+      "human_memorability": 0.1607,
+      "predicted_memorability": 0.34490978717803955
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 11,
+      "text": "So that's when she gave me a little shove,",
+      "human_memorability": 0.375,
+      "predicted_memorability": 0.6608316898345947
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 12,
+      "text": "and I tumbled into the water.",
+      "human_memorability": 0.5179,
+      "predicted_memorability": 0.5046287775039673
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 13,
+      "text": "When I resurfaced, gasping for air,",
+      "human_memorability": 0.25,
+      "predicted_memorability": 0.16311295330524445
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 14,
+      "text": "she just started laughing,",
+      "human_memorability": 0.5714,
+      "predicted_memorability": 0.09463351219892502
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 15,
+      "text": "and she apologized profusely.",
+      "human_memorability": 0.3036,
+      "predicted_memorability": 0.07904179394245148
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 16,
+      "text": "And... my beautiful dress was ruined,",
+      "human_memorability": 0.6607,
+      "predicted_memorability": 0.8044977784156799
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 17,
+      "text": "and naturally, the first thing to do was to get out and dry off,",
+      "human_memorability": 0.375,
+      "predicted_memorability": 0.024102075025439262
+    },
+    {
+      "story": "schissel_v1-pool",
+      "clause_id": 18,
+      "text": "and my cousin just says, \"Just about a few inches more,\" she says, \"and you'd have landed on the cake.\"",
+      "human_memorability": 0.8571,
+      "predicted_memorability": 0.6521839499473572
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 1,
+      "text": "My best friend pushed me into the lake.",
+      "human_memorability": 0.86,
+      "predicted_memorability": 0.918922483921051
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 2,
+      "text": "This happened during our annual summer camping trip",
+      "human_memorability": 0.61,
+      "predicted_memorability": 0.927203357219696
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 3,
+      "text": "and we were enjoying a peaceful afternoon.",
+      "human_memorability": 0.17,
+      "predicted_memorability": 0.6152219772338867
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 4,
+      "text": "The reason it all began,",
+      "human_memorability": 0.07,
+      "predicted_memorability": 0.08764183521270752
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 5,
+      "text": "she spotted a frog near the water's edge or",
+      "human_memorability": 0.68,
+      "predicted_memorability": 0.8713696002960205
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 6,
+      "text": "- this was at our favorite spot in the woods -",
+      "human_memorability": 0.3,
+      "predicted_memorability": 0.4732716679573059
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 7,
+      "text": "and she dared me to catch it.",
+      "human_memorability": 0.64,
+      "predicted_memorability": 0.22587963938713074
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 8,
+      "text": "I had just sat down to eat my sandwich",
+      "human_memorability": 0.57,
+      "predicted_memorability": 0.6739682555198669
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 9,
+      "text": "and I told her I wasn't interested.",
+      "human_memorability": 0.54,
+      "predicted_memorability": 0.2945553958415985
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 10,
+      "text": "'Course friends, y'know, they don't always take no for an answer.",
+      "human_memorability": 0.3,
+      "predicted_memorability": 0.3987633287906647
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 11,
+      "text": "So that's when she snuck up behind me",
+      "human_memorability": 0.35,
+      "predicted_memorability": 0.2932281196117401
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 12,
+      "text": "and gave me a little nudge.",
+      "human_memorability": 0.68,
+      "predicted_memorability": 0.7643107175827026
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 13,
+      "text": "When I emerged from the water, there was a frog on the shore,",
+      "human_memorability": 0.46,
+      "predicted_memorability": 0.9177662134170532
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 14,
+      "text": "she just scooped it up",
+      "human_memorability": 0.52,
+      "predicted_memorability": 0.02635478414595127
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 15,
+      "text": "and handed it to me.",
+      "human_memorability": 0.44,
+      "predicted_memorability": 0.05851471796631813
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 16,
+      "text": "And . . .; I couldn't help but laugh \u2013 uncontrollably.",
+      "human_memorability": 0.57,
+      "predicted_memorability": 0.1453828364610672
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 17,
+      "text": "And naturally, the first thing to do was to get revenge,",
+      "human_memorability": 0.43,
+      "predicted_memorability": 0.2136753499507904
+    },
+    {
+      "story": "schissel_v2-lake",
+      "clause_id": 18,
+      "text": "and I said, \"Just you wait,\" I said, \"you'll get yours soon enough.\"",
+      "human_memorability": 0.6,
+      "predicted_memorability": 0.2757403552532196
+    },
+    {
+      "story": "stein",
+      "clause_id": 1,
+      "text": "We moved down to Third and Wharton.",
+      "human_memorability": 0.3838,
+      "predicted_memorability": 0.4891830086708069
+    },
+    {
+      "story": "stein",
+      "clause_id": 2,
+      "text": "We had gotten moved",
+      "human_memorability": 0.101,
+      "predicted_memorability": 0.373245507478714
+    },
+    {
+      "story": "stein",
+      "clause_id": 3,
+      "text": "but it was like \u2013 you remember I told you my father drank,",
+      "human_memorability": 0.2929,
+      "predicted_memorability": 0.8798229098320007
+    },
+    {
+      "story": "stein",
+      "clause_id": 4,
+      "text": "but it was still day,",
+      "human_memorability": 0.0,
+      "predicted_memorability": 0.4857288897037506
+    },
+    {
+      "story": "stein",
+      "clause_id": 5,
+      "text": "and after he had gotten in and put the furniture where it was supposed to go, my mother left, to go to market to get some food to bring into the house.",
+      "human_memorability": 0.596,
+      "predicted_memorability": 0.507708728313446
+    },
+    {
+      "story": "stein",
+      "clause_id": 6,
+      "text": "And my father went to take the horses \u2013 take the team of horses back.",
+      "human_memorability": 0.3434,
+      "predicted_memorability": 0.8763815760612488
+    },
+    {
+      "story": "stein",
+      "clause_id": 7,
+      "text": "But he didn't come home.",
+      "human_memorability": 0.1313,
+      "predicted_memorability": 0.7235318422317505
+    },
+    {
+      "story": "stein",
+      "clause_id": 8,
+      "text": "He \u2013 stopped somewhere on \u2013 I dunno,",
+      "human_memorability": 0.0101,
+      "predicted_memorability": 0.1092081367969513
+    },
+    {
+      "story": "stein",
+      "clause_id": 9,
+      "text": "but he \u2013 how he \u2013 why he wasn't in the house.",
+      "human_memorability": 0.0101,
+      "predicted_memorability": 0.39787957072257996
+    },
+    {
+      "story": "stein",
+      "clause_id": 10,
+      "text": "And of course I was left there with the kids.",
+      "human_memorability": 0.4949,
+      "predicted_memorability": 0.1557500660419464
+    },
+    {
+      "story": "stein",
+      "clause_id": 11,
+      "text": "Well no sooner did my mother get out of the house \u2013 my father went first \u2013 then \u2013 oh it was such an awful crash came through the window.",
+      "human_memorability": 0.7475,
+      "predicted_memorability": 0.9333135485649109
+    },
+    {
+      "story": "stein",
+      "clause_id": 12,
+      "text": "And I \u2013 and I looked and it was a big stone.",
+      "human_memorability": 0.202,
+      "predicted_memorability": 0.5786607265472412
+    },
+    {
+      "story": "stein",
+      "clause_id": 13,
+      "text": "And then of course they \u2013 they \u2013 well they stoned the house.",
+      "human_memorability": 0.5152,
+      "predicted_memorability": 0.3318050503730774
+    },
+    {
+      "story": "stein",
+      "clause_id": 14,
+      "text": "And I had sense enough to get the kids into the stairway so that they wouldn't get hurt by flyin' glass.",
+      "human_memorability": 0.4545,
+      "predicted_memorability": 0.32260963320732117
+    },
+    {
+      "story": "stein",
+      "clause_id": 15,
+      "text": "And I said to them, \u201cNow you stay there.",
+      "human_memorability": 0.1313,
+      "predicted_memorability": 0.22688961029052734
+    },
+    {
+      "story": "stein",
+      "clause_id": 16,
+      "text": "Don't move 'cause nothing will reach you here.",
+      "human_memorability": 0.0808,
+      "predicted_memorability": 0.19112388789653778
+    },
+    {
+      "story": "stein",
+      "clause_id": 17,
+      "text": "And I'm gonna go and see if I can find mom\u201d \u2013",
+      "human_memorability": 0.3939,
+      "predicted_memorability": 0.5968433022499084
+    },
+    {
+      "story": "stein",
+      "clause_id": 18,
+      "text": "(We call our mother mom.)",
+      "human_memorability": 0.0606,
+      "predicted_memorability": 0.9017893075942993
+    },
+    {
+      "story": "stein",
+      "clause_id": 19,
+      "text": "And they were crying",
+      "human_memorability": 0.0707,
+      "predicted_memorability": 0.11762645840644836
+    },
+    {
+      "story": "stein",
+      "clause_id": 20,
+      "text": "and carryin' on.",
+      "human_memorability": 0.0202,
+      "predicted_memorability": 0.05998479574918747
+    },
+    {
+      "story": "stein",
+      "clause_id": 21,
+      "text": "I was scared to death,",
+      "human_memorability": 0.1818,
+      "predicted_memorability": 0.4143211245536804
+    },
+    {
+      "story": "stein",
+      "clause_id": 22,
+      "text": "I really was frightened out of my wits.",
+      "human_memorability": 0.0909,
+      "predicted_memorability": 0.34836265444755554
+    },
+    {
+      "story": "stein",
+      "clause_id": 23,
+      "text": "And I didn't know what to do,",
+      "human_memorability": 0.0303,
+      "predicted_memorability": 0.26302099227905273
+    },
+    {
+      "story": "stein",
+      "clause_id": 24,
+      "text": "but I remember saying a prayer as I went out the front door because I didn't know what was gonna hit me when I went out that door.",
+      "human_memorability": 0.0505,
+      "predicted_memorability": 0.5037087202072144
+    },
+    {
+      "story": "stein",
+      "clause_id": 25,
+      "text": "And I ran \u2013",
+      "human_memorability": 0.101,
+      "predicted_memorability": 0.30903297662734985
+    },
+    {
+      "story": "stein",
+      "clause_id": 26,
+      "text": "I was ten years old at the time this happened \u2013",
+      "human_memorability": 0.3434,
+      "predicted_memorability": 0.614701509475708
+    },
+    {
+      "story": "stein",
+      "clause_id": 27,
+      "text": "I ran to Fourth street, because I knew my mother wa-",
+      "human_memorability": 0.3535,
+      "predicted_memorability": 0.9658482074737549
+    },
+    {
+      "story": "stein",
+      "clause_id": 28,
+      "text": "They had push carts in those days, on Fourth street.",
+      "human_memorability": 0.101,
+      "predicted_memorability": 0.6861411929130554
+    },
+    {
+      "story": "stein",
+      "clause_id": 29,
+      "text": "And it was a Jewish neighborhood",
+      "human_memorability": 0.3939,
+      "predicted_memorability": 0.3927237093448639
+    },
+    {
+      "story": "stein",
+      "clause_id": 30,
+      "text": "and they \u2013 they stayed open until \u2013 until all hours.",
+      "human_memorability": 0.2323,
+      "predicted_memorability": 0.18431374430656433
+    },
+    {
+      "story": "stein",
+      "clause_id": 31,
+      "text": "Because they would, you know, however much money they could get they wanted.",
+      "human_memorability": 0.101,
+      "predicted_memorability": 0.32393065094947815
+    },
+    {
+      "story": "stein",
+      "clause_id": 32,
+      "text": "So uh that's where she was going to do her shopping.",
+      "human_memorability": 0.2222,
+      "predicted_memorability": 0.22452382743358612
+    },
+    {
+      "story": "stein",
+      "clause_id": 33,
+      "text": "And I finally found my mother.",
+      "human_memorability": 0.4949,
+      "predicted_memorability": 0.9745279550552368
+    },
+    {
+      "story": "stein",
+      "clause_id": 34,
+      "text": "I did find her.",
+      "human_memorability": 0.303,
+      "predicted_memorability": 0.29855185747146606
+    },
+    {
+      "story": "stein",
+      "clause_id": 35,
+      "text": "And while I was trying to tell her what had happened",
+      "human_memorability": 0.3838,
+      "predicted_memorability": 0.26237955689430237
+    },
+    {
+      "story": "stein",
+      "clause_id": 36,
+      "text": "a policeman went by.",
+      "human_memorability": 0.697,
+      "predicted_memorability": 0.13891366124153137
+    },
+    {
+      "story": "stein",
+      "clause_id": 37,
+      "text": "And my voice was such that you could hardly make out what I was saying.",
+      "human_memorability": 0.1515,
+      "predicted_memorability": 0.2774890959262848
+    },
+    {
+      "story": "stein",
+      "clause_id": 38,
+      "text": "I was so nervous and \u2013 and \u2013 my voice was shaking so,",
+      "human_memorability": 0.101,
+      "predicted_memorability": 0.3273300230503082
+    },
+    {
+      "story": "stein",
+      "clause_id": 39,
+      "text": "and he wanted to find out what ha- what was wrong with me.",
+      "human_memorability": 0.1515,
+      "predicted_memorability": 0.34505030512809753
+    },
+    {
+      "story": "stein",
+      "clause_id": 40,
+      "text": "And then when he understood what the situation was he turned to my mother",
+      "human_memorability": 0.2929,
+      "predicted_memorability": 0.9140214920043945
+    },
+    {
+      "story": "stein",
+      "clause_id": 41,
+      "text": "and says, \u201cThis is a bad neighborhood.",
+      "human_memorability": 0.5253,
+      "predicted_memorability": 0.11985532194375992
+    },
+    {
+      "story": "stein",
+      "clause_id": 42,
+      "text": "It's Irish.\u201d",
+      "human_memorability": 0.5556,
+      "predicted_memorability": 0.2188674509525299
+    },
+    {
+      "story": "stein",
+      "clause_id": 43,
+      "text": "And he said, \u201cThey're known to do things like that,",
+      "human_memorability": 0.1111,
+      "predicted_memorability": 0.1442069411277771
+    },
+    {
+      "story": "stein",
+      "clause_id": 44,
+      "text": "Better move out of there.\u201d",
+      "human_memorability": 0.5455,
+      "predicted_memorability": 0.0471176877617836
+    },
+    {
+      "story": "stein",
+      "clause_id": 45,
+      "text": "My mother said, \u201cI just moved in, how am I gonna move out?\u201d",
+      "human_memorability": 0.3535,
+      "predicted_memorability": 0.7754697203636169
+    },
+    {
+      "story": "stein",
+      "clause_id": 46,
+      "text": "He says, \u201cI dunno.\u201d",
+      "human_memorability": 0.0202,
+      "predicted_memorability": 0.16540959477424622
+    },
+    {
+      "story": "stein",
+      "clause_id": 47,
+      "text": "He says, \u201cBut they don't want any black people in there.\u201d",
+      "human_memorability": 0.6061,
+      "predicted_memorability": 0.20151576399803162
+    },
+    {
+      "story": "stein",
+      "clause_id": 48,
+      "text": "An' he didn't say black 'cause they didn't use black then.",
+      "human_memorability": 0.1212,
+      "predicted_memorability": 0.328823447227478
+    },
+    {
+      "story": "stein",
+      "clause_id": 49,
+      "text": "But \u201cthey don't want anybody in there.\u201d",
+      "human_memorability": 0.303,
+      "predicted_memorability": 0.06456056982278824
+    },
+    {
+      "story": "stein",
+      "clause_id": 50,
+      "text": "So uh, she said, \u201cWell you're the law.",
+      "human_memorability": 0.1111,
+      "predicted_memorability": 0.23890361189842224
+    },
+    {
+      "story": "stein",
+      "clause_id": 51,
+      "text": "You're supposed to protect us.\u201d",
+      "human_memorability": 0.101,
+      "predicted_memorability": 0.1856817752122879
+    },
+    {
+      "story": "stein",
+      "clause_id": 52,
+      "text": "He says, \u201cI can't do anything with it.\u201d",
+      "human_memorability": 0.4848,
+      "predicted_memorability": 0.24309346079826355
+    },
+    {
+      "story": "stein",
+      "clause_id": 53,
+      "text": "He was Irish himself.",
+      "human_memorability": 0.2121,
+      "predicted_memorability": 0.31128209829330444
+    },
+    {
+      "story": "stein",
+      "clause_id": 54,
+      "text": "\u201cI can't do anything about it.\u201d",
+      "human_memorability": 0.2323,
+      "predicted_memorability": 0.2388342022895813
+    },
+    {
+      "story": "stein",
+      "clause_id": 55,
+      "text": "So my mother said um, \u201cWhere is the uh precinct you work from?\u201d",
+      "human_memorability": 0.2222,
+      "predicted_memorability": 0.863978385925293
+    },
+    {
+      "story": "stein",
+      "clause_id": 56,
+      "text": "And he told her.",
+      "human_memorability": 0.0505,
+      "predicted_memorability": 0.24591825902462006
+    },
+    {
+      "story": "stein",
+      "clause_id": 57,
+      "text": "I forgot now.",
+      "human_memorability": 0.0,
+      "predicted_memorability": 0.17795394361019135
+    },
+    {
+      "story": "stein",
+      "clause_id": 58,
+      "text": "I was right there with her",
+      "human_memorability": 0.0202,
+      "predicted_memorability": 0.3231563866138458
+    },
+    {
+      "story": "stein",
+      "clause_id": 59,
+      "text": "but I've forgotten where he told her.",
+      "human_memorability": 0.0101,
+      "predicted_memorability": 0.2763936519622803
+    },
+    {
+      "story": "stein",
+      "clause_id": 60,
+      "text": "So uh she said, \u201cWell if you can't do anything to help me, I'll go see who \u2013 if I can't find someone else to help me.\u201d",
+      "human_memorability": 0.2323,
+      "predicted_memorability": 0.12905630469322205
+    },
+    {
+      "story": "stein",
+      "clause_id": 61,
+      "text": "Well in those days black people were so cowed by circumstances an' uniforms and white people, you know, they uh many times didn't assert themselves.",
+      "human_memorability": 0.0404,
+      "predicted_memorability": 0.35432711243629456
+    },
+    {
+      "story": "stein",
+      "clause_id": 62,
+      "text": "But thankfully my mother was not one of those kind.",
+      "human_memorability": 0.1313,
+      "predicted_memorability": 0.9590869545936584
+    },
+    {
+      "story": "stein",
+      "clause_id": 63,
+      "text": "And she \u2013 well I always thought of her as an educated person which she was because she was the only one I knew who had completed high school.",
+      "human_memorability": 0.1515,
+      "predicted_memorability": 0.5271041989326477
+    },
+    {
+      "story": "stein",
+      "clause_id": 64,
+      "text": "She went to Lackawanna high school.",
+      "human_memorability": 0.0202,
+      "predicted_memorability": 0.28447163105010986
+    },
+    {
+      "story": "stein",
+      "clause_id": 65,
+      "text": "And this was \u2013 let me see what year was this happening \u2013 well it must have been nineteen twenty-five, so you can see what \u2013 what the times were.",
+      "human_memorability": 0.2727,
+      "predicted_memorability": 0.14269213378429413
+    },
+    {
+      "story": "stein",
+      "clause_id": 66,
+      "text": "And we went \u2013 she took me, and we went to the police station.",
+      "human_memorability": 0.4545,
+      "predicted_memorability": 0.4270089864730835
+    },
+    {
+      "story": "stein",
+      "clause_id": 67,
+      "text": "And they also had police wagons with horses attached to them. Believe it or not in those days.",
+      "human_memorability": 0.1818,
+      "predicted_memorability": 0.34546610713005066
+    },
+    {
+      "story": "stein",
+      "clause_id": 68,
+      "text": "So my mother said, to the captain, \u201cWhat are you going to do about it?\u201d",
+      "human_memorability": 0.2121,
+      "predicted_memorability": 0.889705240726471
+    },
+    {
+      "story": "stein",
+      "clause_id": 69,
+      "text": "And he says, \u201cWell lady there's nothing we can do about it.\u201d",
+      "human_memorability": 0.5253,
+      "predicted_memorability": 0.22257393598556519
+    },
+    {
+      "story": "stein",
+      "clause_id": 70,
+      "text": "And she says, \u201cYou mean to tell me that I have to live under those circumstances and there's nothing that you can do about it?\u201d",
+      "human_memorability": 0.2121,
+      "predicted_memorability": 0.135117769241333
+    },
+    {
+      "story": "stein",
+      "clause_id": 71,
+      "text": "She says \u2013 he says, \u201cWell uh the only thing I can tell you to do is to move.\u201d",
+      "human_memorability": 0.3939,
+      "predicted_memorability": 0.15939489006996155
+    },
+    {
+      "story": "stein",
+      "clause_id": 72,
+      "text": "He says, \u201cBecause\u201d \u2013 he said to me, \u201cDid you see anyone?\u201d",
+      "human_memorability": 0.1111,
+      "predicted_memorability": 0.13961860537528992
+    },
+    {
+      "story": "stein",
+      "clause_id": 73,
+      "text": "And I said, \u201cNo.\u201d",
+      "human_memorability": 0.101,
+      "predicted_memorability": 0.11092248558998108
+    },
+    {
+      "story": "stein",
+      "clause_id": 74,
+      "text": "He says, \u201cWell how can \u2013 how can you\u201d \u2013 to my mother \u2013 \u201chow can you do anything if you don't know who \u2013 who to put the blame on?\u201d",
+      "human_memorability": 0.1717,
+      "predicted_memorability": 0.37730953097343445
+    },
+    {
+      "story": "stein",
+      "clause_id": 75,
+      "text": "An' he says, \u201cI'm sure there was more than one person.\u201d",
+      "human_memorability": 0.0303,
+      "predicted_memorability": 0.15434807538986206
+    },
+    {
+      "story": "stein",
+      "clause_id": 76,
+      "text": "So my mother said, \u201cWell I don't know what I'm going to do.\u201d",
+      "human_memorability": 0.0303,
+      "predicted_memorability": 0.891547441482544
+    },
+    {
+      "story": "stein",
+      "clause_id": 77,
+      "text": "She says, \u201cBut one thing I know I'm not going to do is move. Because I have no money to move with.\u201d",
+      "human_memorability": 0.6364,
+      "predicted_memorability": 0.13792747259140015
+    },
+    {
+      "story": "stein",
+      "clause_id": 78,
+      "text": "They took all we had to, to pay the rent.",
+      "human_memorability": 0.1515,
+      "predicted_memorability": 0.2691735625267029
+    },
+    {
+      "story": "stein",
+      "clause_id": 79,
+      "text": "In that house you had to pay in advance.",
+      "human_memorability": 0.1212,
+      "predicted_memorability": 0.10655635595321655
+    },
+    {
+      "story": "stein",
+      "clause_id": 80,
+      "text": "And she said, \u201cIf they didn't want me there they should not have rented the house to me.",
+      "human_memorability": 0.2727,
+      "predicted_memorability": 0.6495721936225891
+    },
+    {
+      "story": "stein",
+      "clause_id": 81,
+      "text": "Now the real estate agent should be accountable.\u201d",
+      "human_memorability": 0.0909,
+      "predicted_memorability": 0.3353439271450043
+    },
+    {
+      "story": "stein",
+      "clause_id": 82,
+      "text": "So anyhow, she said to him, \u201cWell I know one thing you can do.\u201d",
+      "human_memorability": 0.1111,
+      "predicted_memorability": 0.29831281304359436
+    },
+    {
+      "story": "stein",
+      "clause_id": 83,
+      "text": "And he says, \u201cWhat's that?\u201d",
+      "human_memorability": 0.0707,
+      "predicted_memorability": 0.1690162718296051
+    },
+    {
+      "story": "stein",
+      "clause_id": 84,
+      "text": "She says, \u201cYou can take me home.\u201d",
+      "human_memorability": 0.5152,
+      "predicted_memorability": 0.20882998406887054
+    },
+    {
+      "story": "stein",
+      "clause_id": 85,
+      "text": "He said, \u201cTake you home?\u201d",
+      "human_memorability": 0.1414,
+      "predicted_memorability": 0.1409619152545929
+    },
+    {
+      "story": "stein",
+      "clause_id": 86,
+      "text": "She said, \u201cYes in the police patrol.\u201d",
+      "human_memorability": 0.4444,
+      "predicted_memorability": 0.0875038355588913
+    },
+    {
+      "story": "stein",
+      "clause_id": 87,
+      "text": "So \u2013 I guess they figured \u201cLet's get this lady out of here because she's talking loud and long.\u201d",
+      "human_memorability": 0.0606,
+      "predicted_memorability": 0.163840189576149
+    },
+    {
+      "story": "stein",
+      "clause_id": 88,
+      "text": "And they had never come up with anybody like that.",
+      "human_memorability": 0.0404,
+      "predicted_memorability": 0.21865755319595337
+    },
+    {
+      "story": "stein",
+      "clause_id": 89,
+      "text": "So they put us in the police patrol",
+      "human_memorability": 0.4141,
+      "predicted_memorability": 0.24329626560211182
+    },
+    {
+      "story": "stein",
+      "clause_id": 90,
+      "text": "and they took us home.",
+      "human_memorability": 0.596,
+      "predicted_memorability": 0.4485854506492615
+    },
+    {
+      "story": "stein",
+      "clause_id": 91,
+      "text": "We weren't far from \u2013 from where it was \u2013 maybe Fifth street \u2013 from where we had moved.",
+      "human_memorability": 0.0909,
+      "predicted_memorability": 0.33781442046165466
+    },
+    {
+      "story": "stein",
+      "clause_id": 92,
+      "text": "And \u2013 course with the horses and the police patrol, and the clang \u2013",
+      "human_memorability": 0.202,
+      "predicted_memorability": 0.17465829849243164
+    },
+    {
+      "story": "stein",
+      "clause_id": 93,
+      "text": "they had a bell that clanged. Clang clang clang \u2013",
+      "human_memorability": 0.2222,
+      "predicted_memorability": 0.5084814429283142
+    },
+    {
+      "story": "stein",
+      "clause_id": 94,
+      "text": "you know they told you about the trolley that went \u201cClang.\u201d",
+      "human_memorability": 0.0303,
+      "predicted_memorability": 0.08065445721149445
+    },
+    {
+      "story": "stein",
+      "clause_id": 95,
+      "text": "Well this police patrol that bell they had, it went \u201cClang clang clang.\u201d",
+      "human_memorability": 0.202,
+      "predicted_memorability": 0.37207791209220886
+    },
+    {
+      "story": "stein",
+      "clause_id": 96,
+      "text": "And um all the neighbors came running out to see what was happening.",
+      "human_memorability": 0.4141,
+      "predicted_memorability": 0.08454590290784836
+    },
+    {
+      "story": "stein",
+      "clause_id": 97,
+      "text": "And of course they saw the man came around the back \u2013",
+      "human_memorability": 0.0303,
+      "predicted_memorability": 0.2696824371814728
+    },
+    {
+      "story": "stein",
+      "clause_id": 98,
+      "text": "I can see it right now \u2013 from where he was sitting up front there where the horses came around,",
+      "human_memorability": 0.0303,
+      "predicted_memorability": 0.2626301646232605
+    },
+    {
+      "story": "stein",
+      "clause_id": 99,
+      "text": "and opened the door in the back.",
+      "human_memorability": 0.0505,
+      "predicted_memorability": 0.4356636703014374
+    },
+    {
+      "story": "stein",
+      "clause_id": 100,
+      "text": "And they had a long door in the back where you had to come down steps to get out the back of the \u2013 of this police patrol.",
+      "human_memorability": 0.0505,
+      "predicted_memorability": 0.13165129721164703
+    },
+    {
+      "story": "stein",
+      "clause_id": 101,
+      "text": "Well we got out of that police patrol \u2013",
+      "human_memorability": 0.0303,
+      "predicted_memorability": 0.2945117950439453
+    },
+    {
+      "story": "stein",
+      "clause_id": 102,
+      "text": "Before the patrol ever left my mother turned",
+      "human_memorability": 0.1212,
+      "predicted_memorability": 0.9764223098754883
+    },
+    {
+      "story": "stein",
+      "clause_id": 103,
+      "text": "and faced all those people that were standing around,",
+      "human_memorability": 0.5152,
+      "predicted_memorability": 0.06885875016450882
+    },
+    {
+      "story": "stein",
+      "clause_id": 104,
+      "text": "and she says, \u201cWhy you're doing this to me I don't know.\u201d",
+      "human_memorability": 0.4242,
+      "predicted_memorability": 0.24991175532341003
+    },
+    {
+      "story": "stein",
+      "clause_id": 105,
+      "text": "She says, \u201cI know that I am different from you, color wise,",
+      "human_memorability": 0.4646,
+      "predicted_memorability": 0.15310212969779968
+    },
+    {
+      "story": "stein",
+      "clause_id": 106,
+      "text": "but in every other respect I'm just the same as you are,",
+      "human_memorability": 0.4141,
+      "predicted_memorability": 0.3493470549583435
+    },
+    {
+      "story": "stein",
+      "clause_id": 107,
+      "text": "and all I'm trying to do is provide a home for my family.\u201d",
+      "human_memorability": 0.3838,
+      "predicted_memorability": 0.9304133653640747
+    },
+    {
+      "story": "stein",
+      "clause_id": 108,
+      "text": "She told them that they had rented the house,",
+      "human_memorability": 0.2929,
+      "predicted_memorability": 0.3623100519180298
+    },
+    {
+      "story": "stein",
+      "clause_id": 109,
+      "text": "she told them how much money she had paid,",
+      "human_memorability": 0.2929,
+      "predicted_memorability": 0.26602235436439514
+    },
+    {
+      "story": "stein",
+      "clause_id": 110,
+      "text": "she had told them that was all the money she had.",
+      "human_memorability": 0.2424,
+      "predicted_memorability": 0.2720981240272522
+    },
+    {
+      "story": "stein",
+      "clause_id": 111,
+      "text": "And they had paid that rent for a month.",
+      "human_memorability": 0.2525,
+      "predicted_memorability": 0.3459216356277466
+    },
+    {
+      "story": "stein",
+      "clause_id": 112,
+      "text": "She knew she was going to be there for the month.",
+      "human_memorability": 0.3131,
+      "predicted_memorability": 0.2594575881958008
+    },
+    {
+      "story": "stein",
+      "clause_id": 113,
+      "text": "She did not know beyond the month.",
+      "human_memorability": 0.0808,
+      "predicted_memorability": 0.270296573638916
+    },
+    {
+      "story": "stein",
+      "clause_id": 114,
+      "text": "Whether they'd have enough money to pay it for the next month.",
+      "human_memorability": 0.0505,
+      "predicted_memorability": 0.2533223628997803
+    },
+    {
+      "story": "stein",
+      "clause_id": 115,
+      "text": "But she knew they were going to be there for the month.",
+      "human_memorability": 0.2929,
+      "predicted_memorability": 0.32875779271125793
+    },
+    {
+      "story": "stein",
+      "clause_id": 116,
+      "text": "She said, \u201cIt is winter time and it is cold.",
+      "human_memorability": 0.1717,
+      "predicted_memorability": 0.6928400993347168
+    },
+    {
+      "story": "stein",
+      "clause_id": 117,
+      "text": "And I cannot afford to be buying windows.\u201d",
+      "human_memorability": 0.1717,
+      "predicted_memorability": 0.3633617162704468
+    },
+    {
+      "story": "stein",
+      "clause_id": 118,
+      "text": "\u201cNow\u201d she said, \u201cWhoever threw the stones I don't know.",
+      "human_memorability": 0.0707,
+      "predicted_memorability": 0.30377161502838135
+    },
+    {
+      "story": "stein",
+      "clause_id": 119,
+      "text": "But you can all see what has happened.",
+      "human_memorability": 0.0909,
+      "predicted_memorability": 0.1277296394109726
+    },
+    {
+      "story": "stein",
+      "clause_id": 120,
+      "text": "And now I'm telling you that we're going to be here for a month.",
+      "human_memorability": 0.2323,
+      "predicted_memorability": 0.1897219866514206
+    },
+    {
+      "story": "stein",
+      "clause_id": 121,
+      "text": "So you might just as well make up your mind to that.",
+      "human_memorability": 0.3232,
+      "predicted_memorability": 0.17102254927158356
+    },
+    {
+      "story": "stein",
+      "clause_id": 122,
+      "text": "If you don't want me here then you people get together and give me enough money to move somewhere else, because I do not have it.\u201d",
+      "human_memorability": 0.4343,
+      "predicted_memorability": 0.20894140005111694
+    },
+    {
+      "story": "stein",
+      "clause_id": 123,
+      "text": "Well of course you know they didn't do that.",
+      "human_memorability": 0.2525,
+      "predicted_memorability": 0.18666115403175354
+    },
+    {
+      "story": "stein",
+      "clause_id": 124,
+      "text": "They probably didn't have any money either.",
+      "human_memorability": 0.1414,
+      "predicted_memorability": 0.28837132453918457
+    },
+    {
+      "story": "stein",
+      "clause_id": 125,
+      "text": "So in the meantime \u2013 not in the meantime but during, during the period of time that we were there, my father became sick.",
+      "human_memorability": 0.4949,
+      "predicted_memorability": 0.9092272520065308
+    },
+    {
+      "story": "stein",
+      "clause_id": 126,
+      "text": "And the neighbors were as nice as anybody could ever have been.",
+      "human_memorability": 0.5657,
+      "predicted_memorability": 0.22938968241214752
+    },
+    {
+      "story": "stein",
+      "clause_id": 127,
+      "text": "When there was trouble they responded just like anyone else.",
+      "human_memorability": 0.4343,
+      "predicted_memorability": 0.11711233109235764
+    },
+    {
+      "story": "stein",
+      "clause_id": 128,
+      "text": "But that was our welcoming to the neighborhood.",
+      "human_memorability": 0.1616,
+      "predicted_memorability": 0.3339647054672241
+    },
+    {
+      "story": "stein",
+      "clause_id": 129,
+      "text": "And it was terrible",
+      "human_memorability": 0.1616,
+      "predicted_memorability": 0.11408734321594238
+    },
+    {
+      "story": "stein",
+      "clause_id": 130,
+      "text": "and it certainly was frightening for me.",
+      "human_memorability": 0.1616,
+      "predicted_memorability": 0.2065887749195099
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 1,
+      "text": "Back in the days when I was a rookie in the police force, the Chief was a veteran.",
+      "human_memorability": 0.82,
+      "predicted_memorability": 0.4860811233520508
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 2,
+      "text": "He had caught a notorious criminal \u2013",
+      "human_memorability": 0.22,
+      "predicted_memorability": 0.6923876404762268
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 3,
+      "text": "or had been awarded for bravery.",
+      "human_memorability": 0.18,
+      "predicted_memorability": 0.6503200531005859
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 4,
+      "text": "But he had \u2013 a young daughter.",
+      "human_memorability": 0.75,
+      "predicted_memorability": 0.8916252255439758
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 5,
+      "text": "And in those days I was a fitness enthusiast.",
+      "human_memorability": 0.35,
+      "predicted_memorability": 0.7681624293327332
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 6,
+      "text": "And it seemed she was trying to impress me.",
+      "human_memorability": 0.62,
+      "predicted_memorability": 0.3148795962333679
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 7,
+      "text": "I never observed it.",
+      "human_memorability": 0.09,
+      "predicted_memorability": 0.3802570700645447
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 8,
+      "text": "Truth is I wasn't very fond of her because she was \u2013",
+      "human_memorability": 0.45,
+      "predicted_memorability": 0.35024765133857727
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 9,
+      "text": "She was a charming girl until she opened her mouth.",
+      "human_memorability": 0.3,
+      "predicted_memorability": 0.46848803758621216
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 10,
+      "text": "She was a chatterbox.",
+      "human_memorability": 0.61,
+      "predicted_memorability": 0.3514539897441864
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 11,
+      "text": "Goodness, she could talk.",
+      "human_memorability": 0.19,
+      "predicted_memorability": 0.38707196712493896
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 12,
+      "text": "Then she left a message one day saying she was going to run away because he was always scolding her about me.",
+      "human_memorability": 0.71,
+      "predicted_memorability": 0.3570418357849121
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 13,
+      "text": "He arrived at my apartment.",
+      "human_memorability": 0.43,
+      "predicted_memorability": 0.7875196933746338
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 14,
+      "text": "Big intimidating look on his face.",
+      "human_memorability": 0.16,
+      "predicted_memorability": 0.2550814747810364
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 15,
+      "text": "I managed to calm him down.",
+      "human_memorability": 0.08,
+      "predicted_memorability": 0.34882715344429016
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 16,
+      "text": "and proposed \u201cWell we'll search for her",
+      "human_memorability": 0.48,
+      "predicted_memorability": 0.18937133252620697
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 17,
+      "text": "and if we can't locate her well you can \u2013 do whatever you think is right.\u201d",
+      "human_memorability": 0.19,
+      "predicted_memorability": 0.2720365524291992
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 18,
+      "text": "I was strategizing.",
+      "human_memorability": 0.17,
+      "predicted_memorability": 0.24533890187740326
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 19,
+      "text": "So he accepted my offer.",
+      "human_memorability": 0.12,
+      "predicted_memorability": 0.6004790663719177
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 20,
+      "text": "And we went to where they found her scarf \u2013 near a park.",
+      "human_memorability": 0.7,
+      "predicted_memorability": 0.19162510335445404
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 21,
+      "text": "and we traced down a little more",
+      "human_memorability": 0.07,
+      "predicted_memorability": 0.18291707336902618
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 22,
+      "text": "and we couldn't locate her.",
+      "human_memorability": 0.32,
+      "predicted_memorability": 0.34605103731155396
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 23,
+      "text": "And returned",
+      "human_memorability": 0.28,
+      "predicted_memorability": 0.060911908745765686
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 24,
+      "text": "\u2013 it was a police station \u2013",
+      "human_memorability": 0.6,
+      "predicted_memorability": 0.19400884211063385
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 25,
+      "text": "she was sitting on a chair with a book in her hands.",
+      "human_memorability": 0.73,
+      "predicted_memorability": 0.7065759897232056
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 26,
+      "text": "She hadn't run away.",
+      "human_memorability": 0.5,
+      "predicted_memorability": 0.23256254196166992
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 27,
+      "text": "But \u2013 nevertheless \u2013 that resolved the issue for that day.",
+      "human_memorability": 0.05,
+      "predicted_memorability": 0.3168650269508362
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 28,
+      "text": "But that evening the deputy, Frank Mitchell, said \u201cYou better transfer and leave because that old man never forgets anything once he gets it into his mind.\u201d",
+      "human_memorability": 0.67,
+      "predicted_memorability": 0.6512600183486938
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 29,
+      "text": "And I did.",
+      "human_memorability": 0.49,
+      "predicted_memorability": 0.6467412114143372
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 30,
+      "text": "I transferred.",
+      "human_memorability": 0.68,
+      "predicted_memorability": 0.47460320591926575
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 31,
+      "text": "and left.",
+      "human_memorability": 0.28,
+      "predicted_memorability": 0.08110382407903671
+    },
+    {
+      "story": "triplett_v1-rookie",
+      "clause_id": 32,
+      "text": "That was the end of my rookie year.",
+      "human_memorability": 0.55,
+      "predicted_memorability": 0.49985912442207336
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 1,
+      "text": "In the neighborhood I grew up in, Mrs. Baker was the resident cat lady.",
+      "human_memorability": 0.9208,
+      "predicted_memorability": 0.9650086760520935
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 2,
+      "text": "She had adopted at least twenty \u2013",
+      "human_memorability": 0.6535,
+      "predicted_memorability": 0.19242647290229797
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 3,
+      "text": "or had given them homes.",
+      "human_memorability": 0.2871,
+      "predicted_memorability": 0.4833771288394928
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 4,
+      "text": "But she had \u2013 a young grandson",
+      "human_memorability": 0.6733,
+      "predicted_memorability": 0.4069775640964508
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 5,
+      "text": "and back then I was quite the tomboy.",
+      "human_memorability": 0.4653,
+      "predicted_memorability": 0.8762505054473877
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 6,
+      "text": "And apparently, he was trying to befriend me.",
+      "human_memorability": 0.5644,
+      "predicted_memorability": 0.5930824875831604
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 7,
+      "text": "I never caught on.",
+      "human_memorability": 0.2277,
+      "predicted_memorability": 0.4567369520664215
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 8,
+      "text": "Truth is I didn't take to him much because he had \u2013",
+      "human_memorability": 0.3762,
+      "predicted_memorability": 0.35025840997695923
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 9,
+      "text": "He was a charming lad until you saw his manners.",
+      "human_memorability": 0.1683,
+      "predicted_memorability": 0.4870460331439972
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 10,
+      "text": "He had poor manners.",
+      "human_memorability": 0.5545,
+      "predicted_memorability": 0.5585938096046448
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 11,
+      "text": "Goodness gracious he had poor manners.",
+      "human_memorability": 0.3465,
+      "predicted_memorability": 0.396555632352829
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 12,
+      "text": "Then he left a note one day saying he was going to run away because she was always nagging about me.",
+      "human_memorability": 0.6337,
+      "predicted_memorability": 0.37468767166137695
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 13,
+      "text": "She came to my treehouse.",
+      "human_memorability": 0.4554,
+      "predicted_memorability": 0.7974330186843872
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 14,
+      "text": "Big old tabby cat in tow.",
+      "human_memorability": 0.3168,
+      "predicted_memorability": 0.8559788465499878
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 15,
+      "text": "I talked her down",
+      "human_memorability": 0.0792,
+      "predicted_memorability": 0.24970965087413788
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 16,
+      "text": "and said \u201cWell we'll go find him",
+      "human_memorability": 0.4158,
+      "predicted_memorability": 0.13436712324619293
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 17,
+      "text": "and if we can't locate him, you can \u2013 go ahead and call the police if you need to.\u201d",
+      "human_memorability": 0.3465,
+      "predicted_memorability": 0.28220459818840027
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 18,
+      "text": "I was strategizing.",
+      "human_memorability": 0.0198,
+      "predicted_memorability": 0.2353242188692093
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 19,
+      "text": "So she took my advice.",
+      "human_memorability": 0.099,
+      "predicted_memorability": 0.4198504090309143
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 20,
+      "text": "And we went to where they found his baseball cap \u2013 near the old mill",
+      "human_memorability": 0.396,
+      "predicted_memorability": 0.6568962931632996
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 21,
+      "text": "and we trailed a bit more",
+      "human_memorability": 0.099,
+      "predicted_memorability": 0.2832312285900116
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 22,
+      "text": "and we didn't find a trace.",
+      "human_memorability": 0.2475,
+      "predicted_memorability": 0.3416390120983124
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 23,
+      "text": "And returned",
+      "human_memorability": 0.1881,
+      "predicted_memorability": 0.06465502828359604
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 24,
+      "text": "\u2013 it was a treehouse club \u2013",
+      "human_memorability": 0.2376,
+      "predicted_memorability": 0.8778053522109985
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 25,
+      "text": "he was sitting on a branch with a comic book in his hand.",
+      "human_memorability": 0.7228,
+      "predicted_memorability": 0.772927463054657
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 26,
+      "text": "He hadn't run away.",
+      "human_memorability": 0.495,
+      "predicted_memorability": 0.2097325623035431
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 27,
+      "text": "But \u2013 however \u2013 that resolved it for that day.",
+      "human_memorability": 0.0396,
+      "predicted_memorability": 0.2447335124015808
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 28,
+      "text": "But that evening the local sheriff, Officer Dawson said \u201cYou better lay low and stay out of sight because that woman never forgets anything once she gets it into her mind.\u201d",
+      "human_memorability": 0.6634,
+      "predicted_memorability": 0.3344821035861969
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 29,
+      "text": "And I did.",
+      "human_memorability": 0.2574,
+      "predicted_memorability": 0.7661884427070618
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 30,
+      "text": "I laid low",
+      "human_memorability": 0.2772,
+      "predicted_memorability": 0.4566201865673065
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 31,
+      "text": "and stayed out of sight.",
+      "human_memorability": 0.2574,
+      "predicted_memorability": 0.014167803339660168
+    },
+    {
+      "story": "triplett_v2-catlady",
+      "clause_id": 32,
+      "text": "That was the second time.",
+      "human_memorability": 0.198,
+      "predicted_memorability": 0.5218761563301086
+    }
+  ]
+}

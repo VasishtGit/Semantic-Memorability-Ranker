@@ -1,11 +1,18 @@
+# Python cache
 __pycache__/
 *.pyc
 
-logs/
-checkpoints/
-
+# Virtual environment
 .venv/
+
+# IDE
 .vscode/
 
+# Logs
+logs/
+*.log
+
+# Model checkpoints
+checkpoints/
 *.pt
 *.pth

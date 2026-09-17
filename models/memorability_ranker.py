@@ -9,7 +9,7 @@ from .memory_projection import MemoryProjection
 from .semantic_memory import SemanticMemory
 
 
-class NeuroDapt(nn.Module):
+class SemanticMemorabilityRanker(nn.Module):
 
     def __init__(
         self,
@@ -51,31 +51,31 @@ class NeuroDapt(nn.Module):
         self,
         input_ids,
         attention_mask,
+        clause_mask,
     ):
-
-        # Produce contextual token embeddings from the input sequence.
+        # Produce contextual token embeddings from ModernBERT.
         hidden = self.backbone(
             input_ids,
             attention_mask,
         )
 
-        # Combine the token embeddings into a single clause-focused vector.
+        # Pool ONLY target-clause tokens.
         pooled = self.pooling(
             hidden,
-            attention_mask,
+            clause_mask,
         )
 
-        # Move the pooled representation into the memory embedding space.
+        # Project into memory space.
         memory = self.memory_projection(
             pooled,
         )
 
-        # Refine the representation using the learned semantic memory bank.
+        # Retrieve from learned semantic memory.
         memory = self.semantic_memory(
             memory,
         )
 
-        # Predict a scalar memorability score and squash it to the $(0, 1)$ range.
+        # Regression prediction.
         score = self.regression(
             memory,
         )
