@@ -165,9 +165,7 @@ class Trainer:
         self.patience = patience
         self.wait = 0
 
-    ####################################################################
     # Train One Epoch
-    ####################################################################
 
     def train_epoch(self):
         """Run one full pass over the training loader."""
@@ -282,9 +280,7 @@ class Trainer:
             / len(self.train_loader)
         )
 
-    ####################################################################
     # Validation
-    ####################################################################
 
     def validate_epoch(self):
         """Run validation and compute regression/ranking metrics."""
@@ -404,9 +400,7 @@ class Trainer:
 
         return metrics
 
-    ####################################################################
     # Save Model
-    ####################################################################
 
     def save_checkpoint(
         self,
@@ -428,9 +422,7 @@ class Trainer:
 
         del state_dict
 
-    ####################################################################
     # Fit
-    ####################################################################
 
     def fit(
         self,
@@ -493,9 +485,7 @@ class Trainer:
                 f"{metrics['pairwise_accuracy']:.4f}"
             )
 
-            ##################################################
             # Best Model
-            ##################################################
 
             # Save when validation pairwise accuracy improves.
             if (
@@ -532,9 +522,8 @@ class Trainer:
                     f"({self.wait}/{self.patience})"
                 )
 
-            ##################################################
+
             # Early Stopping
-            ##################################################
 
             if (
                 self.wait
@@ -547,9 +536,7 @@ class Trainer:
 
                 break
 
-        ##################################################
         # Load Best Model
-        ##################################################
 
         best_checkpoint = (
             self.checkpoint_dir
