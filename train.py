@@ -104,10 +104,7 @@ dataset = MemorabilityDataset(
     "data/processed/breithaupt_training.jsonl",
 )
 
-
-# ------------------------------------------------------------------
 # Story-level train/validation split
-# ------------------------------------------------------------------
 
 story_ids = sorted(
     {
