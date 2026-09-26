@@ -1,4 +1,9 @@
-"""Training loop and checkpointing utilities for the memorability ranker."""
+"""Training loop and checkpointing utilities for the memorability ranker.
+
+This module provides a production-grade training manager featuring mixed-precision
+acceleration, gradient clipping, within-story pairwise accuracy evaluation, cosine
+learning rate scheduling, best-checkpoint persistence, and early stopping.
+"""
 
 from pathlib import Path
 
@@ -16,15 +21,29 @@ def pairwise_accuracy(
     targets,
     story_ids,
 ):
-    """Calculate within-story pairwise ranking accuracy."""
+    """Calculate within-story pairwise ranking accuracy.
+
+    For every pair of clauses within the same story where target scores differ,
+    checks whether the predicted relative order matches the target order.
+
+    Args:
+        predictions: Predicted memorability tensor of shape (N,).
+        targets: Ground-truth target tensor of shape (N,).
+        story_ids: Story identifier tensor of shape (N,).
+
+    Returns:
+        Fraction of correctly ordered pairs as a float in [0.0, 1.0].
+    """
 
     correct = 0
     total = 0
 
+    # Identify all distinct story IDs present in the evaluation tensors
     unique_stories = torch.unique(
         story_ids
     )
 
+    # Evaluate pairwise concordance story by story
     for story_id in unique_stories:
 
         mask = story_ids == story_id
@@ -37,14 +56,17 @@ def pairwise_accuracy(
             mask
         ]
 
+        # Require at least two clauses in a story to evaluate pairwise comparisons
         if len(story_predictions) < 2:
             continue
 
+        # Form matrix of pairwise differences for predictions
         prediction_diff = (
             story_predictions.unsqueeze(1)
             - story_predictions.unsqueeze(0)
         )
 
+        # Form matrix of pairwise differences for ground-truth targets
         target_diff = (
             story_targets.unsqueeze(1)
             - story_targets.unsqueeze(0)
@@ -53,9 +75,11 @@ def pairwise_accuracy(
         # Only compare pairs with different target scores.
         pair_mask = target_diff != 0
 
+        # Skip if no pairs have distinct targets
         if not pair_mask.any():
             continue
 
+        # Count pairs where predicted difference direction matches target direction
         correct += (
             (
                 torch.sign(
@@ -69,8 +93,10 @@ def pairwise_accuracy(
             .item()
         )
 
+        # Increment total count of compared valid pairs
         total += pair_mask.sum().item()
 
+    # Return zero if no valid pairs were found
     if total == 0:
         return 0.0
 
@@ -93,6 +119,20 @@ class Trainer:
         scheduler=None,
         patience=10,
     ):
+        """Initialize the training manager.
+
+        Args:
+            model: PyTorch neural network module to train.
+            train_loader: DataLoader for the training dataset.
+            val_loader: DataLoader for the validation dataset.
+            lr: Initial learning rate for AdamW.
+            weight_decay: Weight decay coefficient for AdamW regularization.
+            loss_name: Name of the loss criterion ('ranking', 'mse', 'mae', 'huber').
+            device: Target device string ('cuda' or 'cpu').
+            checkpoint_dir: Directory path where model checkpoints are saved.
+            scheduler: Optional learning rate scheduler.
+            patience: Number of epochs to wait without improvement before early stopping.
+        """
         # Resolve the requested device.
         #
         # If CUDA was requested but is unavailable, fall back to CPU.
@@ -137,6 +177,7 @@ class Trainer:
             self.device.type == "cuda"
         )
 
+        # Initialize gradient scaler for automatic mixed precision on CUDA
         if self.use_amp:
             self.scaler = torch.amp.GradScaler(
                 "cuda"
@@ -170,10 +211,12 @@ class Trainer:
     def train_epoch(self):
         """Run one full pass over the training loader."""
 
+        # Set model to training mode
         self.model.train()
 
         running_loss = 0.0
 
+        # Progress bar over training batches
         progress = tqdm(
             self.train_loader,
             desc="Training",
@@ -181,12 +224,14 @@ class Trainer:
 
         for batch in progress:
 
+            # Transfer token IDs to active compute device
             input_ids = batch[
                 "input_ids"
             ].to(
                 self.device
             )
 
+            # Transfer attention mask to active compute device
             attention_mask = batch[
                 "attention_mask"
             ].to(
@@ -203,18 +248,21 @@ class Trainer:
                 self.device
             )
 
+            # Transfer target labels to active compute device
             labels = batch[
                 "labels"
             ].to(
                 self.device
             )
 
+            # Transfer story IDs to active compute device
             story_ids = batch[
                 "story_ids"
             ].to(
                 self.device
             )
 
+            # Clear parameter gradients from previous step
             self.optimizer.zero_grad(
                 set_to_none=True
             )
@@ -225,33 +273,40 @@ class Trainer:
                 device_type=self.device.type,
                 enabled=self.use_amp,
             ):
+                # Forward pass through the memorability ranker
                 prediction = self.model(
                     input_ids=input_ids,
                     attention_mask=attention_mask,
                     clause_mask=clause_mask,
                 )
 
+                # Compute composite regression and pairwise ranking loss
                 loss = self.loss_fn(
                     prediction,
                     labels,
                     story_ids,
                 )
 
+            # Backpropagation and optimization step with AMP scaling
             if self.use_amp:
 
+                # Scale loss and backpropagate gradients
                 self.scaler.scale(
                     loss
                 ).backward()
 
+                # Unscale gradients prior to gradient clipping
                 self.scaler.unscale_(
                     self.optimizer
                 )
 
+                # Clip gradient norms to stabilize training
                 torch.nn.utils.clip_grad_norm_(
                     self.model.parameters(),
                     max_norm=1.0,
                 )
 
+                # Step optimizer and update scaler
                 self.scaler.step(
                     self.optimizer
                 )
@@ -260,21 +315,26 @@ class Trainer:
 
             else:
 
+                # Standard backpropagation on CPU
                 loss.backward()
 
+                # Clip gradient norms
                 torch.nn.utils.clip_grad_norm_(
                     self.model.parameters(),
                     max_norm=1.0,
                 )
 
+                # Step optimizer parameters
                 self.optimizer.step()
 
             running_loss += loss.item()
 
+            # Update progress bar display
             progress.set_postfix(
                 loss=f"{loss.item():.4f}"
             )
 
+        # Return mean loss across all batches
         return (
             running_loss
             / len(self.train_loader)
@@ -285,6 +345,7 @@ class Trainer:
     def validate_epoch(self):
         """Run validation and compute regression/ranking metrics."""
 
+        # Set model to evaluation mode
         self.model.eval()
 
         predictions = []
@@ -293,6 +354,7 @@ class Trainer:
 
         running_loss = 0.0
 
+        # Disable gradient computation during validation
         with torch.no_grad():
 
             progress = tqdm(
@@ -302,6 +364,7 @@ class Trainer:
 
             for batch in progress:
 
+                # Transfer batch tensors to compute device
                 input_ids = batch[
                     "input_ids"
                 ].to(
@@ -333,6 +396,7 @@ class Trainer:
                     self.device
                 )
 
+                # Execute forward evaluation under autocast
                 with torch.autocast(
                     device_type=self.device.type,
                     enabled=self.use_amp,
@@ -351,6 +415,7 @@ class Trainer:
 
                 running_loss += loss.item()
 
+                # Collect batch predictions and targets for global evaluation
                 predictions.extend(
                     prediction.cpu().tolist()
                 )
@@ -363,6 +428,7 @@ class Trainer:
                     batch_story_ids.cpu().tolist()
                 )
 
+        # Compute regression metrics (MAE, RMSE, Pearson, Spearman)
         metrics = regression_metrics(
             predictions,
             labels,
@@ -415,6 +481,7 @@ class Trainer:
             for key, value in self.model.state_dict().items()
         }
 
+        # Save model state dictionary to target checkpoint path
         torch.save(
             state_dict,
             self.checkpoint_dir / filename,
@@ -439,17 +506,21 @@ class Trainer:
                 f"\nEpoch {epoch}/{epochs}"
             )
 
+            # Execute training pass
             train_loss = (
                 self.train_epoch()
             )
 
+            # Execute validation pass
             metrics = (
                 self.validate_epoch()
             )
 
+            # Step the learning rate scheduler if configured
             if self.scheduler is not None:
                 self.scheduler.step()
 
+            # Log epoch metrics to console
             print(
                 f"Train Loss : "
                 f"{train_loss:.4f}"
@@ -505,6 +576,7 @@ class Trainer:
 
                 self.wait = 0
 
+                # Persist the new best checkpoint
                 self.save_checkpoint(
                     "best.pt"
                 )
@@ -525,6 +597,7 @@ class Trainer:
 
             # Early Stopping
 
+            # Check if patience threshold has been reached
             if (
                 self.wait
                 >= self.patience
@@ -543,6 +616,7 @@ class Trainer:
             / "best.pt"
         )
 
+        # Verify that a checkpoint file was successfully created
         if not best_checkpoint.exists():
 
             raise RuntimeError(
@@ -551,6 +625,7 @@ class Trainer:
                 "checkpoint could be saved."
             )
 
+        # Restore model parameters from the best recorded checkpoint
         self.model.load_state_dict(
             torch.load(
                 best_checkpoint,

@@ -1,4 +1,10 @@
-"""Evaluate Georgiou benchmark predictions."""
+"""Evaluate Georgiou benchmark predictions.
+
+This module computes comprehensive information retrieval and ranking metrics on model
+predictions against human memorability annotations, including Discounted Cumulative Gain
+(NDCG@k), Top-k set overlap, within-story pairwise accuracy, Kendall's tau, Spearman's rank
+correlation, Mean Absolute Error (MAE), and Root Mean Squared Error (RMSE).
+"""
 
 from __future__ import annotations
 
@@ -10,10 +16,12 @@ from scipy.stats import kendalltau, spearmanr
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
 
+# Path to the JSON file containing generated predictions
 PREDICTIONS_FILE = Path(
     "evaluation/georgiou_predictions.json"
 )
 
+# Output path for the detailed metric audit report
 AUDIT_FILE = Path(
     "evaluation/georgiou_metric_audit.json"
 )
@@ -22,15 +30,24 @@ AUDIT_FILE = Path(
 def dcg(
     relevances,
 ):
-    """Calculate discounted cumulative gain."""
+    """Calculate discounted cumulative gain.
+
+    Args:
+        relevances: Array of continuous relevance scores ordered by rank.
+
+    Returns:
+        Discounted cumulative gain as a float.
+    """
     relevances = np.asarray(
         relevances,
         dtype=float,
     )
 
+    # Return zero for empty relevance arrays
     if len(relevances) == 0:
         return 0.0
 
+    # Logarithmic rank discount factors starting at rank 1 (position index + 2)
     discounts = np.log2(
         np.arange(
             2,
@@ -38,6 +55,7 @@ def dcg(
         )
     )
 
+    # Exponential relevance formulation for continuous targets
     return float(
         np.sum(
             (2.0 ** relevances - 1.0)
@@ -51,7 +69,16 @@ def ndcg_for_story(
     targets,
     k,
 ):
-    """Calculate NDCG@k for one story."""
+    """Calculate NDCG@k for one story.
+
+    Args:
+        predictions: Sequence of predicted memorability values for the story.
+        targets: Sequence of human ground-truth values for the story.
+        k: Truncation cutoff rank.
+
+    Returns:
+        Normalized discounted cumulative gain at rank k as a float in [0.0, 1.0].
+    """
     predictions = np.asarray(
         predictions,
         dtype=float,
@@ -65,21 +92,25 @@ def ndcg_for_story(
     if len(targets) == 0:
         return 0.0
 
+    # Ensure cutoff does not exceed total available items
     k = min(
         k,
         len(targets),
     )
 
+    # Indices sorted by predicted score descending
     predicted_order = np.argsort(
         -predictions,
         kind="stable",
     )[:k]
 
+    # Indices sorted by ideal ground-truth score descending
     ideal_order = np.argsort(
         -targets,
         kind="stable",
     )[:k]
 
+    # Calculate DCG for predicted ranking and ideal ranking
     predicted_dcg = dcg(
         targets[predicted_order]
     )
@@ -91,6 +122,7 @@ def ndcg_for_story(
     if ideal_dcg == 0:
         return 0.0
 
+    # Normalize predicted DCG by ideal DCG
     return float(
         predicted_dcg / ideal_dcg
     )
@@ -101,7 +133,16 @@ def top_k_overlap_for_story(
     targets,
     k=5,
 ):
-    """Calculate top-k set overlap for one story."""
+    """Calculate top-k set overlap for one story.
+
+    Args:
+        predictions: Sequence of predicted values.
+        targets: Sequence of ground-truth values.
+        k: Number of top items to consider.
+
+    Returns:
+        Jaccard-like set overlap fraction: |top_pred intersect top_actual| / k.
+    """
     predictions = np.asarray(
         predictions,
         dtype=float,
@@ -120,6 +161,7 @@ def top_k_overlap_for_story(
         len(targets),
     )
 
+    # Top-k predicted clause indices
     predicted_top = set(
         np.argsort(
             -predictions,
@@ -127,6 +169,7 @@ def top_k_overlap_for_story(
         )[:k]
     )
 
+    # Top-k ground-truth clause indices
     actual_top = set(
         np.argsort(
             -targets,
@@ -134,6 +177,7 @@ def top_k_overlap_for_story(
         )[:k]
     )
 
+    # Calculate intersection size divided by k
     return float(
         len(
             predicted_top & actual_top
@@ -146,7 +190,15 @@ def pairwise_accuracy_for_story(
     predictions,
     targets,
 ):
-    """Calculate pairwise ranking accuracy for one story."""
+    """Calculate pairwise ranking accuracy for one story.
+
+    Args:
+        predictions: Sequence of predicted values.
+        targets: Sequence of target values.
+
+    Returns:
+        Fraction of correctly ranked clause pairs within the story.
+    """
     predictions = np.asarray(
         predictions,
         dtype=float,
@@ -160,6 +212,7 @@ def pairwise_accuracy_for_story(
     correct = 0
     total = 0
 
+    # Iterate over all distinct clause pairs within the story
     for i in range(
         len(targets)
     ):
@@ -181,6 +234,7 @@ def pairwise_accuracy_for_story(
                 - predictions[j]
             )
 
+            # Check if predicted sign matches target sign
             if (
                 np.sign(
                     prediction_difference
@@ -204,7 +258,14 @@ def pairwise_accuracy_for_story(
 def safe_rank_correlation(
     statistic,
 ):
-    """Convert a scipy correlation result to a finite float when possible."""
+    """Convert a scipy correlation result to a finite float when possible.
+
+    Args:
+        statistic: Scipy correlation output value or object.
+
+    Returns:
+        A finite float representation, or 0.0 if invalid or non-finite.
+    """
     if statistic is None:
         return 0.0
 
@@ -220,7 +281,15 @@ def evaluate_story(
     predictions,
     targets,
 ):
-    """Calculate all ranking metrics for one story."""
+    """Calculate all ranking metrics for one story.
+
+    Args:
+        predictions: Sequence of predicted values.
+        targets: Sequence of ground-truth target values.
+
+    Returns:
+        Dictionary of computed metric names and values for this story.
+    """
     predictions = np.asarray(
         predictions,
         dtype=float,
@@ -231,6 +300,7 @@ def evaluate_story(
         dtype=float,
     )
 
+    # Validate that array dimensions match
     if len(predictions) != len(targets):
         raise ValueError(
             "Predictions and targets must "
@@ -242,11 +312,13 @@ def evaluate_story(
             "Cannot evaluate an empty story."
         )
 
+    # Compute Spearman rank correlation for the story
     spearman = spearmanr(
         predictions,
         targets,
     ).statistic
 
+    # Compute Kendall tau rank correlation for the story
     kendall = kendalltau(
         predictions,
         targets,
@@ -255,6 +327,7 @@ def evaluate_story(
     return {
         "clauses": len(targets),
 
+        # Mean Absolute Error
         "mae": float(
             mean_absolute_error(
                 targets,
@@ -262,6 +335,7 @@ def evaluate_story(
             )
         ),
 
+        # Root Mean Squared Error
         "rmse": float(
             np.sqrt(
                 mean_squared_error(
@@ -271,14 +345,17 @@ def evaluate_story(
             )
         ),
 
+        # Spearman rank correlation
         "spearman": safe_rank_correlation(
             spearman
         ),
 
+        # Kendall tau correlation
         "kendall_tau": safe_rank_correlation(
             kendall
         ),
 
+        # Within-story pairwise concordance
         "pairwise_accuracy": (
             pairwise_accuracy_for_story(
                 predictions,
@@ -286,6 +363,7 @@ def evaluate_story(
             )
         ),
 
+        # Normalized Discounted Cumulative Gain at rank cutoffs
         "ndcg_at_1": (
             ndcg_for_story(
                 predictions,
@@ -310,6 +388,7 @@ def evaluate_story(
             )
         ),
 
+        # Set overlap among top 5 clauses
         "top_5_overlap": (
             top_k_overlap_for_story(
                 predictions,
@@ -323,7 +402,15 @@ def evaluate_story(
 def evaluate_dataset(
     rows,
 ):
-    """Calculate aggregate and per-story metrics."""
+    """Calculate aggregate and per-story metrics.
+
+    Args:
+        rows: List of prediction dictionaries with 'story', 'predicted_memorability',
+            and 'human_memorability' fields.
+
+    Returns:
+        Dictionary containing 'aggregate' and 'per_story' metrics.
+    """
     if not rows:
         raise ValueError(
             "Prediction file contains no rows."
@@ -331,6 +418,7 @@ def evaluate_dataset(
 
     stories = {}
 
+    # Validate and group rows by story
     for row in rows:
         required_fields = {
             "story",
@@ -378,6 +466,7 @@ def evaluate_dataset(
 
     per_story = {}
 
+    # Evaluate each story individually
     for story in sorted(stories):
         predictions = stories[
             story
@@ -392,6 +481,7 @@ def evaluate_dataset(
             targets,
         )
 
+    # Collect flat lists across all clauses
     all_predictions = [
         float(
             row["predicted_memorability"]
@@ -406,11 +496,13 @@ def evaluate_dataset(
         for row in rows
     ]
 
+    # Global Spearman rank correlation
     aggregate_spearman = spearmanr(
         all_predictions,
         all_targets,
     ).statistic
 
+    # Global Kendall tau correlation
     aggregate_kendall = kendalltau(
         all_predictions,
         all_targets,
@@ -422,6 +514,7 @@ def evaluate_dataset(
     aggregate_pairwise_correct = 0
     aggregate_pairwise_total = 0
 
+    # Accumulate pairwise accuracy counts across stories
     for story in sorted(stories):
         predictions = np.asarray(
             stories[story]["predictions"],
@@ -473,6 +566,7 @@ def evaluate_dataset(
             / aggregate_pairwise_total
         )
 
+    # Mean NDCG across stories
     aggregate_ndcg = {}
 
     for k in (
@@ -493,6 +587,7 @@ def evaluate_dataset(
             )
         )
 
+    # Mean top-5 overlap across stories
     aggregate_top5 = float(
         np.mean(
             [
@@ -504,6 +599,7 @@ def evaluate_dataset(
         )
     )
 
+    # Compile aggregate summary metrics
     aggregate = {
         "stories": len(stories),
         "clauses": len(rows),
@@ -549,12 +645,14 @@ def evaluate_dataset(
 
 def main():
     """Load predictions, evaluate them, and save the audit."""
+    # Ensure prediction input file exists
     if not PREDICTIONS_FILE.exists():
         raise FileNotFoundError(
             f"Predictions not found: "
             f"{PREDICTIONS_FILE}"
         )
 
+    # Load prediction records from JSON
     with open(
         PREDICTIONS_FILE,
         "r",
@@ -570,15 +668,18 @@ def main():
 
     rows = result["predictions"]
 
+    # Compute comprehensive evaluation metrics
     audit = evaluate_dataset(
         rows
     )
 
+    # Ensure output audit directory exists
     AUDIT_FILE.parent.mkdir(
         parents=True,
         exist_ok=True,
     )
 
+    # Write evaluation audit to JSON
     with open(
         AUDIT_FILE,
         "w",
@@ -602,6 +703,7 @@ def main():
         "====================="
     )
 
+    # Display aggregate metrics
     for name, value in aggregate.items():
         if isinstance(
             value,
@@ -625,6 +727,7 @@ def main():
         "================="
     )
 
+    # Display individual story metrics
     for story, metrics in audit[
         "per_story"
     ].items():

@@ -1,3 +1,4 @@
+# Project package metadata and core dependencies
 [project]
 name = "semantic-memorability-ranker"
 version = "0.1.0"
@@ -18,11 +19,13 @@ dependencies = [
     "sentence-transformers>=6.0.1",
 ]
 
+# PyTorch CUDA wheel repository index
 [[tool.uv.index]]
 name = "pytorch-cu128"
 url = "https://download.pytorch.org/whl/cu128"
 explicit = true
 
+# Direct CUDA wheels for PyTorch packages from custom uv index
 [tool.uv.sources]
 torch = { index = "pytorch-cu128" }
 torchvision = { index = "pytorch-cu128" }

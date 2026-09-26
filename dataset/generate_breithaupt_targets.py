@@ -1,4 +1,12 @@
-"""Generate clause-level Breithaupt memorability targets."""
+"""Generate clause-level Breithaupt memorability targets.
+
+This script processes segmented narrative stories and their multi-generation retellings
+from the Breithaupt dataset. For each clause in an original story, it identifies the
+top semantic candidate clauses in each retelling generation using dense bi-encoder
+embeddings, scores semantic preservation with a MeaningBERT cross-encoder, combines
+generation scores using transmission chain weights (0.2, 0.3, 0.5), and normalizes
+the resulting memorability scores to within-story percentile ranks.
+"""
 
 import json
 from pathlib import Path
@@ -11,10 +19,12 @@ from transformers import (
 )
 
 
+# Path to input segmented stories containing original and retelling clauses
 INPUT_PATH = Path(
     "data/processed/breithaupt_segmented.json"
 )
 
+# Output destination for computed clause memorability targets
 OUTPUT_PATH = Path(
     "data/processed/breithaupt_targets.json"
 )
@@ -26,6 +36,7 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 # MeaningBERT is used as the semantic matching scorer.
 MEANINGBERT_MODEL = "davebulaval/MeaningBERT"
 
+# Number of top candidate clauses to retrieve per retelling generation via cosine similarity
 TOP_K = 5
 
 
@@ -34,17 +45,30 @@ def cosine_top_k(
     candidate_embeddings,
     k=TOP_K,
 ):
+    """Retrieve the top-k candidate clause embeddings closest to the query embedding.
+
+    Args:
+        query_embedding: Normalized query vector of shape (D,).
+        candidate_embeddings: Matrix of candidate vectors of shape (N, D).
+        k: Maximum number of top candidates to retrieve.
+
+    Returns:
+        Tuple of (top_similarity_values, top_indices).
+    """
+    # Compute cosine similarities between the single query vector and all candidates
     scores = torch.nn.functional.cosine_similarity(
         query_embedding.unsqueeze(0),
         candidate_embeddings,
         dim=1,
     )
 
+    # Bound k by the number of candidate clauses available
     k = min(
         k,
         len(scores),
     )
 
+    # Extract top-k highest similarity scores and corresponding indices
     values, indices = torch.topk(
         scores,
         k=k,
@@ -56,19 +80,32 @@ def cosine_top_k(
 def percentile_normalize(
     scores,
 ):
-    """Convert raw scores to within-story percentile ranks."""
+    """Convert raw scores to within-story percentile ranks.
+
+    Tied scores receive the average rank of the tied group. The resulting ranks
+    are normalized linearly to the range [0.0, 1.0].
+
+    Args:
+        scores: Sequence of raw numerical scores.
+
+    Returns:
+        List of percentile-normalized float scores in the interval [0.0, 1.0].
+    """
 
     n = len(scores)
 
+    # Return default mid-point if there is only one score
     if n <= 1:
         return [0.5] * n
 
+    # Return mid-point values if all scores are identical
     if all(
         score == scores[0]
         for score in scores
     ):
         return [0.5] * n
 
+    # Obtain indices sorted by score in ascending order
     sorted_indices = sorted(
         range(n),
         key=lambda i: scores[i],
@@ -78,9 +115,11 @@ def percentile_normalize(
 
     position = 0
 
+    # Assign fractional ranks handling tied values
     while position < n:
         end = position + 1
 
+        # Identify contiguous span of identical scores
         while (
             end < n
             and scores[
@@ -92,12 +131,14 @@ def percentile_normalize(
         ):
             end += 1
 
+        # Compute mid-rank for the group of tied elements (1-based ranking)
         average_rank = (
             position
             + 1
             + end
         ) / 2.0
 
+        # Assign computed average rank to each tied position
         for j in range(
             position,
             end,
@@ -108,6 +149,7 @@ def percentile_normalize(
 
         position = end
 
+    # Normalize ranks into [0.0, 1.0] range
     normalized = [
         (rank - 1.0) / (n - 1.0)
         for rank in ranks
@@ -117,6 +159,8 @@ def percentile_normalize(
 
 
 def main():
+    """Execute the end-to-end Breithaupt memorability target generation pipeline."""
+    # Load input segmented stories and retellings from JSON
     with open(
         INPUT_PATH,
         "r",
@@ -124,6 +168,7 @@ def main():
     ) as f:
         stories = json.load(f)
 
+    # Determine runtime hardware device
     device = (
         "cuda"
         if torch.cuda.is_available()
@@ -140,11 +185,13 @@ def main():
         f"{MEANINGBERT_MODEL}"
     )
 
+    # Initialize the sentence transformer for candidate retrieval
     embedding_model = SentenceTransformer(
         EMBEDDING_MODEL,
         device=device,
     )
 
+    # Initialize the cross-encoder tokenizer and model for semantic matching
     meaning_tokenizer = AutoTokenizer.from_pretrained(
         MEANINGBERT_MODEL,
     )
@@ -157,6 +204,7 @@ def main():
 
     all_outputs = []
 
+    # Process each story and its associated retelling generations
     for story_number, story in enumerate(
         stories,
         start=1,
@@ -184,12 +232,14 @@ def main():
             f"{len(original_clauses)}"
         )
 
+        # Compute normalized bi-encoder embeddings for original clauses
         original_embeddings = embedding_model.encode(
             original_clauses,
             convert_to_tensor=True,
             normalize_embeddings=True,
         )
 
+        # Compute normalized bi-encoder embeddings for each retelling generation
         retelling_embeddings = [
             embedding_model.encode(
                 clauses,
@@ -201,12 +251,15 @@ def main():
 
         results = []
 
+        # Iterate over each clause in the original narrative
         for i, original_clause in enumerate(
             original_clauses
         ):
             retelling_scores = []
 
+            # Retrieve top candidates and score semantic preservation for each generation
             for g in range(3):
+                # Retrieve top-k nearest candidate clauses by cosine similarity
                 _, candidate_indices = cosine_top_k(
                     original_embeddings[i],
                     retelling_embeddings[g],
@@ -217,6 +270,7 @@ def main():
                     for index in candidate_indices.tolist()
                 ]
 
+                # Format original-clause and candidate pairs for cross-encoder scoring
                 inputs = meaning_tokenizer(
                     [original_clause] * len(candidates),
                     candidates,
@@ -230,6 +284,7 @@ def main():
                     for key, value in inputs.items()
                 }
 
+                # Predict semantic preservation logits with MeaningBERT
                 with torch.no_grad():
                     logits = meaning_model(
                         **inputs
@@ -237,6 +292,7 @@ def main():
 
                 scores = logits.squeeze(-1)
 
+                # Select highest scoring semantic match among the top candidates
                 best_index = torch.argmax(
                     scores
                 ).item()
@@ -249,6 +305,8 @@ def main():
                     best_score
                 )
 
+            # Compute weighted composite memorability score across generations
+            # Retelling 3 carries the highest weight as it reflects longest survival
             memorability = (
                 0.2 * retelling_scores[0]
                 + 0.3 * retelling_scores[1]
@@ -264,6 +322,7 @@ def main():
                 }
             )
 
+        # Extract raw scores for within-story percentile normalization
         raw_scores = [
             result["memorability_raw"]
             for result in results
@@ -273,6 +332,7 @@ def main():
             raw_scores
         )
 
+        # Assign normalized percentile scores to each clause record
         for result, normalized_score in zip(
             results,
             normalized_scores,
@@ -304,11 +364,13 @@ def main():
         "stories": all_outputs,
     }
 
+    # Ensure output destination directory exists
     OUTPUT_PATH.parent.mkdir(
         parents=True,
         exist_ok=True,
     )
 
+    # Persist structured targets to disk
     with open(
         OUTPUT_PATH,
         "w",
